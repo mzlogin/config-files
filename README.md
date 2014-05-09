@@ -1,7 +1,7 @@
 vimconf
 =======
 
-My gvim for windows 7 config via Vundle.
+My gvim for win7 config via Vundle.
 
 The Quick Start below is just for self use, I don't promise it will work well in your environment.
 
