@@ -21,7 +21,7 @@ The plugin taglist required ctags.exe, so download it, and put it into YourVimIn
 ```
 cd %userprofile%
 git init
-git remote add origin https://github.com/mzlogin/vimconf.git
+git remote add origin git@github.com:mzlogin/vimconf.git
 git pull origin master
 ```
 
