@@ -70,3 +70,10 @@ let NERDTreeWinPos=1
 " move across lines
 set ww=b,<,>
 set backspace=indent,eol,start
+
+" key map
+nmap , \
+nmap <Leader>l <C-w>l
+nmap <Leader>j <C-w>j
+nmap <Leader>k <C-w>k
+nmap <Leader>h <C-w>h
