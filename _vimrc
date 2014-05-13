@@ -45,6 +45,7 @@ set nu
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,big5,latin-1   "ucs-bom,兼容记事本保存的带有前3字节EFBBBF标识的UTF-8编码文件
 
+" menu和底部提示乱码的问题
 source $VIMRUNTIME/delmenu.vim   
 source $VIMRUNTIME/menu.vim  
 language messages zh_US.utf-8 
@@ -68,8 +69,8 @@ set hlsearch
 let NERDTreeWinPos=1
 
 " move across lines
-set ww=b,<,>
 set backspace=indent,eol,start
+set ww+=b,<,>
 
 " key map
 nmap , \
