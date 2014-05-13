@@ -60,7 +60,7 @@ set autochdir
 set nobackup
 set nowritebackup
 
-" hightlight
+" highlight
 syntax on
 set hlsearch
 
@@ -77,3 +77,8 @@ nmap <Leader>l <C-w>l
 nmap <Leader>j <C-w>j
 nmap <Leader>k <C-w>k
 nmap <Leader>h <C-w>h
+
+" folding
+set foldmethod=syntax
+set foldcolumn=1
+set foldlevelstart=99
