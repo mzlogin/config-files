@@ -63,7 +63,10 @@ set nowritebackup
 
 " highlight
 syntax on
+
+" search
 set hlsearch
+set incsearch
 
 " NERDTree settings
 let NERDTreeWinPos=1
