@@ -16,6 +16,9 @@ git clone https://github.com/gmarik/Vundle.vim.git %userprofile%/vimfiles/bundle
 * Put ctags.exe  
 The plugin taglist required ctags.exe, so download it, and put it into YourVimInstallPath/vim74/ directory.
 
+* Put cscope.exe (*optional*)  
+If you want to view code, you may need cscope support, put it into YourVimInstallPath/vim74/ directory.(It may depend on regex2.dll and curses2.dll)
+
 * Get my _vimrc:
 
 ```
