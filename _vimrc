@@ -15,6 +15,9 @@ Plugin 'scrooloose/nerdtree'
 " taglist
 Plugin 'vim-scripts/taglist.vim'
 
+" cscope key map
+Plugin 'vim-scripts/cscope_macros.vim'
+
 " markdown
 Plugin 'tpope/vim-markdown'
 
@@ -86,3 +89,16 @@ nmap <Leader>h <C-w>h
 set foldmethod=syntax
 set foldcolumn=1
 set foldlevelstart=99
+
+" autoload cscope.out
+if has("cscope")
+    if filereadable("cscope.out")
+        cs add cscope.out
+    else
+       let cscope_file=findfile("cscope.out", ".;")
+       let cscope_pre=matchstr(cscope_file, ".*/")
+       if !empty(cscope_file) && filereadable(cscope_file)
+           exe "cs add" cscope_file cscope_pre
+       endif
+     endif
+endif
