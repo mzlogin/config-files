@@ -89,3 +89,6 @@ nmap <Leader>h <C-w>h
 set foldmethod=syntax
 set foldcolumn=1
 set foldlevelstart=99
+
+" no indent for case, default, public, private and protected
+set cino+=:0,g0
