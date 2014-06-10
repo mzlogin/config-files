@@ -21,6 +21,12 @@ Plugin 'mzlogin/cscope_macros.vim'
 " markdown
 Plugin 'tpope/vim-markdown'
 
+" Python
+Plugin 'vim-scripts/Pydiction'
+
+" C++
+Plugin 'vim-scripts/OmniCppComplete'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -92,3 +98,21 @@ set foldlevelstart=99
 
 " no indent for case, default, public, private and protected
 set cino+=:0,g0
+
+" Python auto-complete
+let g:pydiction_location = '~/vimfiles/bundle/Pydiction/complete-dict'
+let g:pydiction_menu_height = 10
+
+" C++ auto-complete
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1 
+let OmniCpp_ShowPrototypeInAbbr = 1 
+let OmniCpp_MayCompleteDot = 1   
+let OmniCpp_MayCompleteArrow = 1 
+let OmniCpp_MayCompleteScope = 1 
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+" autoclose complete window
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
+set completeopt=menuone,menu,longest
