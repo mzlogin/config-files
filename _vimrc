@@ -39,30 +39,33 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-"设置tab=4
+" leader
+let mapleader=","
+
+"tab=4
 set shiftwidth=4
 set sts=4
 set tabstop=4
 
-"tab->空格
+"tab->white space
 set expandtab
 
-"启动gVIM时最大化
+"gVIM Maximize when start
 au GUIEnter * simalt ~x
 
-"显示行号
+"line number
 set nu
 
 " encoding
 set encoding=utf-8
-set fileencodings=ucs-bom,utf-8,cp936,big5,latin-1   "ucs-bom,兼容记事本保存的带有前3字节EFBBBF标识的UTF-8编码文件
+set fileencodings=ucs-bom,utf-8,cp936,big5,latin-1   "ucs-bom, compatible notepad UTF-8 with first three bytes is EFBBBF
 
-" menu和底部提示乱码的问题
+" menu and bottom messy code
 source $VIMRUNTIME/delmenu.vim   
 source $VIMRUNTIME/menu.vim  
 language messages zh_US.utf-8 
 
-"设置配色方案
+"color scheme
 colorscheme desert 
 
 " Ctags
@@ -88,10 +91,10 @@ set backspace=indent,eol,start
 set ww+=b,<,>
 
 " split window switch key map
-nnoremap ,l <C-w>l
-nnoremap ,j <C-w>j
-nnoremap ,k <C-w>k
-nnoremap ,h <C-w>h
+nnoremap <leader>l <C-w>l
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>h <C-w>h
 
 " folding
 set foldmethod=syntax
