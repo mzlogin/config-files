@@ -27,6 +27,9 @@ Plugin 'vim-scripts/Pydiction'
 " C++
 Plugin 'vim-scripts/OmniCppComplete'
 
+" comment lines in a program
+Plugin 'vim-scripts/EnhCommentify.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -85,11 +88,10 @@ set backspace=indent,eol,start
 set ww+=b,<,>
 
 " split window switch key map
-nmap , \
-nmap <Leader>l <C-w>l
-nmap <Leader>j <C-w>j
-nmap <Leader>k <C-w>k
-nmap <Leader>h <C-w>h
+nnoremap ,l <C-w>l
+nnoremap ,j <C-w>j
+nnoremap ,k <C-w>k
+nnoremap ,h <C-w>h
 
 " folding
 set foldmethod=syntax
@@ -104,7 +106,7 @@ let g:pydiction_location = '~/vimfiles/bundle/Pydiction/complete-dict'
 let g:pydiction_menu_height = 10
 
 " C++ auto-complete
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+nnoremap <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 let OmniCpp_ShowPrototypeInAbbr = 1 
 let OmniCpp_MayCompleteScope = 1 
 " autoclose complete window
