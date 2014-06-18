@@ -30,6 +30,9 @@ Plugin 'vim-scripts/OmniCppComplete'
 " comment lines in a program
 Plugin 'vim-scripts/EnhCommentify.vim'
 
+"MiniBufExpl
+Plugin 'fholgado/minibufexpl.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -40,7 +43,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " leader
-let mapleader=","
+let mapleader="\\"
 
 "tab=4
 set shiftwidth=4
@@ -91,10 +94,10 @@ set backspace=indent,eol,start
 set ww+=b,<,>
 
 " split window switch key map
-nnoremap <leader>l <C-w>l
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>h <C-w>h
+noremap <C-l> <C-w>l
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-h> <C-w>h
 
 " folding
 set foldmethod=syntax
