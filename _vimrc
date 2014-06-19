@@ -103,9 +103,6 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-h> <C-w>h
 
-" tags stack
-noremap <C-[> <C-]>z<CR>
-
 " folding
 set foldmethod=syntax
 set foldcolumn=1
