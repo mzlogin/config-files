@@ -103,6 +103,9 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-h> <C-w>h
 
+" tags stack
+noremap <C-[> <C-]>z<CR>
+
 " folding
 set foldmethod=syntax
 set foldcolumn=1
@@ -122,3 +125,7 @@ let OmniCpp_MayCompleteScope = 1
 " autoclose complete window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
 set completeopt=menuone,menu,longest
+
+" taglist settings
+let Tlist_Show_One_File = 1
+let Tlist_Sort_Type = "name"
