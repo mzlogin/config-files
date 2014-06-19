@@ -53,8 +53,12 @@ set tabstop=4
 "tab->white space
 set expandtab
 
-"gVIM Maximize when start
-au GUIEnter * simalt ~x
+"gui options
+if has("gui_running")
+    au GUIEnter * simalt ~x
+    set guioptions-=m   "menu
+    set guioptions-=T   "toolbar
+endif
 
 "line number
 set nu
