@@ -19,9 +19,6 @@ The plugin taglist required ctags.exe, so download it, and put it into YourVimIn
 * Put cscope.exe (*optional*)  
 If you want to view code, you may need cscope support, put it into YourVimInstallPath/vim74/ directory.(It may depend on regex2.dll and curses2.dll)
 
-* Config CLisp (*optional*)  
-If you use vim to write clisp, just install clisp and make sure you can start clisp from commandline immediately.
-
 * Get my _vimrc:
 
 ```
