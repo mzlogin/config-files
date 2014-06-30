@@ -27,9 +27,6 @@ Plugin 'vim-scripts/Pydiction'
 " C++
 Plugin 'vim-scripts/OmniCppComplete'
 
-" Lisp
-Plugin 'vim-scripts/slimv.vim'
-
 " comment lines in a program
 Plugin 'vim-scripts/EnhCommentify.vim'
 
@@ -129,6 +126,3 @@ set completeopt=menuone,menu,longest
 " taglist settings
 let Tlist_Show_One_File = 1
 let Tlist_Sort_Type = "name"
-
-" Slimv
-let g:slimv_swank_cmd = '!start /MIN clisp -i "C:\Users\Chump\vimfiles\bundle\slimv.vim\slime\start-swank.lisp"'
