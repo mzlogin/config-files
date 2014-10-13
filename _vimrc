@@ -27,6 +27,7 @@ Plugin 'vim-scripts/Pydiction'
 " C++
 Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'vim-scripts/a.vim'
+Plugin 'mbbill/code_complete'
 
 " comment lines in a program
 Plugin 'vim-scripts/EnhCommentify.vim'
@@ -79,7 +80,8 @@ colorscheme desert
 " Ctags
 set tags=tags
 set tags+=./tags
-set tags+=~/MyTags/cpptags
+set tags+=~/MyTags/crttags
+set tags+=~/MyTags/stltags
 set tags+=~/MyTags/win32tags
 set autochdir
 
