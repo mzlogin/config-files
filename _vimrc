@@ -77,7 +77,10 @@ language messages zh_US.utf-8
 colorscheme desert 
 
 " Ctags
-set tags=tags;
+set tags=tags
+set tags+=./tags
+set tags+=~/MyTags/cpptags
+set tags+=~/MyTags/win32tags
 set autochdir
 
 " no back up
