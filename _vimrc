@@ -27,7 +27,7 @@ Plugin 'vim-scripts/Pydiction'
 " C++
 Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'vim-scripts/a.vim'
-Plugin 'mbbill/code_complete'
+Plugin 'mzlogin/code_complete'
 
 " comment lines in a program
 Plugin 'vim-scripts/EnhCommentify.vim'
