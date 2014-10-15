@@ -80,9 +80,9 @@ colorscheme desert
 " Ctags
 set tags=tags
 set tags+=./tags
-set tags+=~/MyTags/crttags
-set tags+=~/MyTags/stltags
-set tags+=~/MyTags/win32tags
+set tags+=~/tags-files/crttags
+set tags+=~/tags-files/stltags
+set tags+=~/tags-files/win32tags
 set autochdir
 
 " no back up

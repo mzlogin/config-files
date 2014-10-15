@@ -1,7 +1,10 @@
-vimconf
+config-files
 =======
 
-My gvim for win7 config via Vundle.
+Contains config files below.
+
+1. vim config for win7 via Vundle.  
+2. stl views support for gdb.  
 
 The Quick Start below is just for self use, I don't promise it will work well in your environment.
 
@@ -13,11 +16,14 @@ The Quick Start below is just for self use, I don't promise it will work well in
 git clone https://github.com/gmarik/Vundle.vim.git %userprofile%/vimfiles/bundle/Vundle.vim
 ```
 
-* Put ctags.exe  
+* place ctags.exe  
 The plugin taglist required ctags.exe, so download it, and put it into YourVimInstallPath/vim74/ directory.
 
-* Put cscope.exe (*optional*)  
+* place cscope.exe (*optional*)  
 If you want to view code, you may need cscope support, put it into YourVimInstallPath/vim74/ directory.(It may depend on regex2.dll and curses2.dll)
+
+* generate tags files (*optional*)
+For better c++ coding experience, generate your crttags and win32tags into ~/tags-files dir.
 
 * Get my _vimrc:
 
