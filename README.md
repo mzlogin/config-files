@@ -5,6 +5,7 @@ Contains config files below.
 
 1. vim config for win7 via Vundle.  
 2. stl views support for gdb.  
+3. stl tags file generate from <http://www.vim.org/scripts/script.php?script_id=2358>.
 
 The Quick Start below is just for self use, I don't promise it will work well in your environment.
 
