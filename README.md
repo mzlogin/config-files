@@ -23,7 +23,7 @@ The plugin taglist required ctags.exe, so download it, and put it into YourVimIn
 * place cscope.exe (*optional*)  
 If you want to view code, you may need cscope support, put it into YourVimInstallPath/vim74/ directory.(It may depend on regex2.dll and curses2.dll)
 
-* generate tags files (*optional*)
+* generate tags files (*optional*)  
 For better c++ coding experience, generate your crttags and win32tags into ~/tags-files dir.
 
 * pull config files:
