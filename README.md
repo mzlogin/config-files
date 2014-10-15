@@ -25,12 +25,12 @@ If you want to view code, you may need cscope support, put it into YourVimInstal
 * generate tags files (*optional*)
 For better c++ coding experience, generate your crttags and win32tags into ~/tags-files dir.
 
-* Get my _vimrc:
+* pull config files:
 
 ```
 cd %userprofile%
 git init
-git remote add origin git@github.com:mzlogin/vimconf.git
+git remote add origin git@github.com:mzlogin/config-files.git
 git pull origin master
 ```
 
