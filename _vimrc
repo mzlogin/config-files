@@ -12,6 +12,9 @@ Plugin 'gmarik/Vundle.vim'
 " file explorer
 Plugin 'scrooloose/nerdtree'
 
+" file finder
+Plugin 'kien/ctrlp.vim'
+
 " taglist
 Plugin 'vim-scripts/taglist.vim'
 
@@ -132,3 +135,8 @@ set completeopt=menuone,menu,longest
 " taglist settings
 let Tlist_Show_One_File = 1
 let Tlist_Sort_Type = "name"
+
+" ctrlp settings
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
+let g:ctrlp_match_window_bottom=1
+let g:ctrlp_max_height=10
