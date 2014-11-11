@@ -60,7 +60,9 @@ set expandtab
 
 "gui options
 if has("gui_running")
-    au GUIEnter * simalt ~x
+    if has("win32")
+        au GUIEnter * simalt ~x
+    endif
     set guioptions-=m   "menu
     set guioptions-=T   "toolbar
 endif
@@ -75,7 +77,9 @@ set fileencodings=ucs-bom,utf-8,cp936,big5,latin-1   "ucs-bom, compatible notepa
 " menu and bottom messy code
 source $VIMRUNTIME/delmenu.vim   
 source $VIMRUNTIME/menu.vim  
-language messages zh_US.utf-8 
+if has("win32")
+    language messages zh_US.utf-8 
+endif
 
 "color scheme
 colorscheme desert 
