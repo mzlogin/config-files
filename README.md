@@ -48,14 +48,14 @@ Start vim, and exec `:PluginInstall`
 git clone https://github.com/gmarik/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
 ```
 
-* install ctags
+* install ctags  
 The plugin taglist required ctags, so install it.
 
 ```
 sudo apt-get install ctags-exuberant
 ```
 
-* install cscope
+* install cscope  
 If you want to view code, you may need cscope support, so install it.
 
 ```
