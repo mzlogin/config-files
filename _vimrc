@@ -62,6 +62,8 @@ set expandtab
 if has("gui_running")
     if has("win32")
         au GUIEnter * simalt ~x
+    else
+        set guifont=Ubuntu\ Mono\ 12
     endif
     set guioptions-=m   "menu
     set guioptions-=T   "toolbar
