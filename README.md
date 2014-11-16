@@ -52,7 +52,7 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
 The plugin taglist required ctags, so install it.
 
 ```
-sudo apt-get install ctags-exuberant
+sudo apt-get install exuberant-ctags
 ```
 
 * install cscope  
