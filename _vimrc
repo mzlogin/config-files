@@ -24,9 +24,6 @@ Plugin 'mzlogin/cscope_macros.vim'
 " markdown
 Plugin 'tpope/vim-markdown'
 
-" Python
-Plugin 'vim-scripts/Pydiction'
-
 " C++
 Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'vim-scripts/a.vim'
@@ -125,10 +122,6 @@ set foldlevelstart=99
 
 " no indent for case, default, public, private and protected
 set cino+=:0,g0
-
-" Python auto-complete
-let g:pydiction_location = '~/vimfiles/bundle/Pydiction/complete-dict'
-let g:pydiction_menu_height = 10
 
 " C++ auto-complete
 nnoremap <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
