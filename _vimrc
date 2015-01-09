@@ -32,8 +32,11 @@ Plugin 'mzlogin/code_complete'
 " comment lines in a program
 Plugin 'vim-scripts/EnhCommentify.vim'
 
-"MiniBufExpl
+" MiniBufExpl
 Plugin 'fholgado/minibufexpl.vim'
+
+" characters draw
+Plugin 'vim-scripts/DrawIt'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
