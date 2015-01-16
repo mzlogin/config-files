@@ -1,4 +1,8 @@
-*
+/*
 !_vimrc
 !.gdbinit
 !tags-files/
+!.emacs
+!.emacs.d
+.emacs.d/*
+!/.emacs.d/modes
