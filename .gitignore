@@ -5,4 +5,4 @@
 !.emacs
 !.emacs.d
 .emacs.d/*
-!/.emacs.d/modes
+!/.emacs.d/site-lisp
