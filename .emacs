@@ -18,6 +18,11 @@
       '(lambda()
 	 (gtags-mode t)))
 
+;; code auto completion
+(add-hook 'after-init-hook 'global-company-mode)
+(setq company-idle-delay 0)
+(setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
