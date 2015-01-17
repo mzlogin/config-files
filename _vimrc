@@ -118,6 +118,12 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-h> <C-w>h
 
+" insert mode move settings
+inoremap <A-l> <Right>
+inoremap <A-j> <Down>
+inoremap <A-k> <Up>
+inoremap <A-h> <Left>
+
 " folding
 set foldmethod=syntax
 set foldcolumn=1
@@ -128,6 +134,8 @@ set cino+=:0,g0
 
 " C++ auto-complete
 nnoremap <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+nnoremap <C-F11> :!cscope -Rb <CR>
+inoremap <A-/> <C-x><C-o>
 let OmniCpp_ShowPrototypeInAbbr = 1 
 let OmniCpp_MayCompleteScope = 1 
 " autoclose complete window
