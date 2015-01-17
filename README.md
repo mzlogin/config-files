@@ -67,7 +67,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
     For example to install ggtags:
 
     ```
-    M-x list-packages <RETURN>
+    M-x package-install <RETURN>
     ggtags <RETURN>
     ```
 
