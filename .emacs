@@ -1,5 +1,14 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
+;; set up package repository
+(require 'package)
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.org/packages/") t)
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize)
+
 ;; markdown
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
