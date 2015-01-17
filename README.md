@@ -16,11 +16,14 @@ The Quick Start below is just for self use, I don't promise it will work well in
 ###Quick Start
 
 ####Windows
+
+**Vim**
+
 * Set up Vundle:
 
-```
-git clone https://github.com/gmarik/Vundle.vim.git %userprofile%/vimfiles/bundle/Vundle.vim
-```
+    ```
+    git clone https://github.com/gmarik/Vundle.vim.git %userprofile%/vimfiles/bundle/Vundle.vim
+    ```
 
 * place ctags.exe
 
@@ -36,12 +39,12 @@ git clone https://github.com/gmarik/Vundle.vim.git %userprofile%/vimfiles/bundle
 
 * pull config files:
 
-```
-cd %userprofile%
-git init
-git remote add origin git@github.com:mzlogin/config-files.git
-git pull origin master
-```
+    ```
+    cd %userprofile%
+    git init
+    git remote add origin git@github.com:mzlogin/config-files.git
+    git pull origin master
+    ```
 
 * Install plugins
 
@@ -49,28 +52,47 @@ git pull origin master
 
 * Done!
 
+**Emacs**
+
+* download GNU Global from <http://www.gnu.org/software/global/>, and copy files to Emacs directory.
+
+* use elpa in Emacs to install plugins below:
+    
+    * company
+
+    * ggtags
+
+    * markdown-mode
+
+    For example to install ggtags:
+
+    ```
+    M-x list-packages <RETURN>
+    ggtags <RETURN>
+    ```
+
 ####Ubuntu
 * Set up Vundle:
 
-```
-git clone https://github.com/gmarik/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
-```
+    ```
+    git clone https://github.com/gmarik/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
+    ```
 
 * install ctags
 
 	The plugin taglist required ctags, so install it.
 
-```
-sudo apt-get install exuberant-ctags
-```
+    ```
+    sudo apt-get install exuberant-ctags
+    ```
 
 * install cscope
 
 	If you want to view code, you may need cscope support, so install it.
 
-```
-sudo apt-get install cscope
-```
+    ```
+    sudo apt-get install cscope
+    ```
 
 * generate tags files (*optional*)
 
@@ -78,12 +100,12 @@ sudo apt-get install cscope
 
 * pull config files:
 
-```
-cd ~
-git init
-git remote add origin git@github.com:mzlogin/config-files.git
-git pull origin master
-```
+    ```
+    cd ~
+    git init
+    git remote add origin git@github.com:mzlogin/config-files.git
+    git pull origin master
+    ```
 
 * Install plugins
 

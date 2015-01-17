@@ -19,13 +19,13 @@
 
 ;; gtags
 (setq gtags-suggested-key-mapping t)
-(require 'gtags)
+(require 'ggtags)
 (setq c-mode-hook
       '(lambda()
-	 (gtags-mode t)))
+	 (ggtags-mode t)))
 (setq c++-mode-hook
       '(lambda()
-	 (gtags-mode t)))
+	 (ggtags-mode t)))
 
 ;; code auto completion
 (add-hook 'after-init-hook 'global-company-mode)
