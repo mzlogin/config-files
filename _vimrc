@@ -148,5 +148,6 @@ let Tlist_Sort_Type = "name"
 
 " ctrlp settings
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
-let g:ctrlp_match_window_bottom=1
-let g:ctrlp_max_height=10
+let g:ctrlp_match_window_bottom = 1
+let g:ctrlp_max_height = 10
+let g:ctrlp_max_files = 0
