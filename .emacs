@@ -47,5 +47,14 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; Setting English Font
+(set-face-attribute
+ 'default nil :font "Consolas 11")
+;; Setting Chinese Font
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+		    charset
+		    (font-spec :family "Microsoft Yahei" :size 16)))
+
 ;; Maximize after startup
-;; (run-with-idle-timer 1 nil 'w32-send-sys-command 61488)
+(run-with-idle-timer 1 nil 'w32-send-sys-command 61488)
