@@ -14,8 +14,9 @@
   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
-;; default directory
+;; generic settings
 (setq default-directory "~/")
+(set-language-environment "utf-8")
 
 ;; gtags
 (setq gtags-suggested-key-mapping t)
