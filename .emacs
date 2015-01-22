@@ -31,6 +31,9 @@
 (add-hook 'after-init-hook 'global-company-mode)
 (setq company-idle-delay 0)
 (setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")
+(add-hook 'markdown-mode-hook
+      '(lambda()
+	 (company-mode 0)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
