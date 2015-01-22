@@ -14,8 +14,9 @@
   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
-;; default directory
+;; generic settings
 (setq default-directory "~/")
+(set-language-environment "utf-8")
 
 ;; gtags
 (setq gtags-suggested-key-mapping t)
@@ -40,8 +41,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t)
+ '(custom-enabled-themes (quote (tango-dark)))
  '(global-linum-mode t)
+ '(inhibit-startup-screen t)
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
