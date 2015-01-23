@@ -29,6 +29,9 @@ Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'vim-scripts/a.vim'
 Plugin 'mzlogin/code_complete'
 
+" Java
+Plugin 'vim-scripts/javacomplete'
+
 " comment lines in a program
 Plugin 'vim-scripts/EnhCommentify.vim'
 
@@ -138,6 +141,13 @@ nnoremap <C-F11> :!cscope -Rb <CR>
 inoremap <A-/> <C-x><C-o>
 let OmniCpp_ShowPrototypeInAbbr = 1 
 let OmniCpp_MayCompleteScope = 1 
+
+" Java auto-complete
+if has("autocmd")
+    autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+    autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
+endif
+
 " autoclose complete window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
 set completeopt=menuone,menu,longest
