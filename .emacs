@@ -35,6 +35,9 @@
 (add-hook 'markdown-mode-hook
       '(lambda()
 	 (company-mode 0)))
+(add-hook 'eshell-mode-hook
+      '(lambda()
+	 (company-mode 0)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
