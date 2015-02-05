@@ -41,6 +41,9 @@ Plugin 'fholgado/minibufexpl.vim'
 " characters draw
 Plugin 'vim-scripts/DrawIt'
 
+" js formatter
+Plugin 'vim-scripts/jsbeautify'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
