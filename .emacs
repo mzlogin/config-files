@@ -69,3 +69,7 @@
 
 ;; ido-mode
 (ido-mode 1)
+
+;; projectile
+(projectile-global-mode)
+(setq projectile-require-project-root nil)

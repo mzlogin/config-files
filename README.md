@@ -64,6 +64,8 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
     * markdown-mode
 
+	* projectile
+
     For example to install ggtags:
 
     ```
