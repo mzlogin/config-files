@@ -66,3 +66,6 @@
 
 ;; Maximize after startup
 (run-with-idle-timer 1 nil 'w32-send-sys-command 61488)
+
+;; ido-mode
+(ido-mode 1)
