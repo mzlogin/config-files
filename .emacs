@@ -86,6 +86,7 @@
                                    (smex-major-mode-commands)))
 
 ;; projectile
+(require 'projectile)
 (projectile-global-mode)
 (setq projectile-require-project-root nil)
 
@@ -93,8 +94,10 @@
 (add-hook 'org-mode-hook (lambda() (setq truncate-lines nil)))
 
 ;; evil-mode
+(require 'evil)
 (evil-mode t)
 
-;; speedbar
+;; sr-speedbar
 (require 'sr-speedbar)
 (setq speedbar-show-unknown-files t)
+(global-set-key (kbd "<f5>") 'sr-speedbar-toggle)
