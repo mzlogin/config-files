@@ -101,3 +101,14 @@
 (require 'sr-speedbar)
 (setq speedbar-show-unknown-files t)
 (global-set-key (kbd "<f5>") 'sr-speedbar-toggle)
+
+;; jedi
+(require 'jedi)
+(autoload 'jedi:setup "jedi" nil t)
+(setq jedi:setup-keys t)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
+
+;; evil-nerd-commenter
+(require 'evil-nerd-commenter)
+(evilnc-default-hotkeys)

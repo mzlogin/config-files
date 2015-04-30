@@ -72,6 +72,16 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 	* evil
 
+	* jedi
+		* pip install virtualenv
+	    * M-x package-install <RETURN> jedi <RETURN>
+		* M-x package-install <RETUREN> exec-path-from-shell <RETURN>
+		* restart emacs
+		* M-x exec-path-from-shell-initialize
+		* M-x jedi:install-server
+
+	* evil-nerd-commenter
+
     For example to install ggtags:
 
     ```
