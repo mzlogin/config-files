@@ -76,3 +76,6 @@
 
 ;; org-mode
 (add-hook 'org-mode-hook (lambda() (setq truncate-lines nil)))
+
+;; evil-mode
+(evil-mode t)
