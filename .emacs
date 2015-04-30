@@ -73,3 +73,6 @@
 ;; projectile
 (projectile-global-mode)
 (setq projectile-require-project-root nil)
+
+;; org-mode
+(add-hook 'org-mode-hook (lambda() (setq truncate-lines nil)))
