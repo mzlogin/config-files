@@ -67,8 +67,23 @@
 ;; Maximize after startup
 (run-with-idle-timer 1 nil 'w32-send-sys-command 61488)
 
-;; ido-mode
-(ido-mode 1)
+;; ido-mode for open file tips
+(ido-mode t)
+
+;; smex for M-x tips
+(global-set-key [(meta x)] (lambda ()
+                             (interactive)
+                             (or (boundp 'smex-cache)
+                                 (smex-initialize))
+                             (global-set-key [(meta x)] 'smex)
+                             (smex)))
+
+(global-set-key [(shift meta x)] (lambda ()
+                                   (interactive)
+                                   (or (boundp 'smex-cache)
+                                       (smex-initialize))
+                                   (global-set-key [(shift meta x)] 'smex-major-mode-commands)
+                                   (smex-major-mode-commands)))
 
 ;; projectile
 (projectile-global-mode)
@@ -79,3 +94,7 @@
 
 ;; evil-mode
 (evil-mode t)
+
+;; speedbar
+(require 'sr-speedbar)
+(setq speedbar-show-unknown-files t)
