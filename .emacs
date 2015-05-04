@@ -21,6 +21,7 @@
 (prefer-coding-system 'utf-8)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq backup-directory-alist (quote (("." . "~/.backups"))))
+(setq frame-title-format "%f")
 
 ;; indent
 (setq indent-tabs-mode nil)

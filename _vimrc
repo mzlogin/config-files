@@ -130,6 +130,10 @@ inoremap <A-j> <Down>
 inoremap <A-k> <Up>
 inoremap <A-h> <Left>
 
+" select auto complete item
+inoremap <A-n> <C-n>
+inoremap <A-p> <C-p>
+
 " folding
 set foldmethod=syntax
 set foldcolumn=1
