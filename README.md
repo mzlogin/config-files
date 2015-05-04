@@ -56,6 +56,8 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * download GNU Global from <http://www.gnu.org/software/global/>, and copy files to Emacs directory.
 
+* copy c++ headers into ~/.emacs.d/cpp-headers
+
 * use elpa in Emacs to install plugins below:
     
     * company
@@ -83,6 +85,8 @@ The Quick Start below is just for self use, I don't promise it will work well in
 		* M-x jedi:install-server
 
 	* evil-nerd-commenter
+
+	* function-args
 
     For example to install ggtags:
 

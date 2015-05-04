@@ -17,6 +17,54 @@
 ;; generic settings
 (setq default-directory "~/")
 (set-language-environment "utf-8")
+(prefer-coding-system 'chinese-gbk)
+(prefer-coding-system 'utf-8)
+(defalias 'yes-or-no-p 'y-or-n-p)
+(setq backup-directory-alist (quote (("." . "~/.backups"))))
+
+;; indent
+(setq indent-tabs-mode nil)
+(setq default-tab-width 4)
+(setq tab-width 4)
+(setq tab-stop-list (number-sequence 4 120 4))
+
+(defconst my-c-style
+  '((c-tab-always-indent        . t)
+    (c-hanging-braces-alist     . ((substatement-open after)
+                                   (brace-list-open)))
+    (c-hanging-colons-alist     . ((member-init-intro before)
+                                   (inher-intro)
+                                   (case-label after)
+                                   (label after)
+                                   (access-label after)))
+    (c-cleanup-list             . (scope-operator
+                                   empty-defun-braces
+                                   defun-close-semi))
+    (c-offsets-alist            . ((arglist-close . c-lineup-arglist)
+                                   (substatement-open . 0)
+                                   (case-label        . 0)
+                                   (block-open        . 4)
+                                   (knr-argdecl-intro . -)))
+    (c-echo-syntactic-information-p . t)
+    )
+  "My C Programming Style")
+
+;; offset customizations not in my-c-style
+(setq c-offsets-alist '((member-init-intro . ++)))
+
+;; Customizations for all modes in CC Mode.
+(defun my-c-mode-common-hook ()
+  ;; add my personal style and set it for the current buffer
+  (c-add-style "PERSONAL" my-c-style t)
+  ;; other customizations
+  (setq tab-width 4
+        indent-tabs-mode nil)
+  ;; key bindings for all supported languages.  We can put these in
+  ;; c-mode-base-map because c-mode-map, c++-mode-map, objc-mode-map,
+  ;; java-mode-map, idl-mode-map, and pike-mode-map inherit from it.
+  )
+
+(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 
 ;; ggtags
 (require 'ggtags)
@@ -47,7 +95,12 @@
 (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
 
 ;; code auto completion
+(require 'cc-mode)
+(require 'semantic)
 (require 'company)
+(global-semanticdb-minor-mode 1)
+(global-semantic-idle-scheduler-mode 1)
+(semantic-mode 1)
 (add-hook 'after-init-hook 'global-company-mode)
 (setq company-idle-delay 0)
 (setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")
@@ -57,6 +110,9 @@
 (add-hook 'eshell-mode-hook
       '(lambda()
 	 (company-mode 0)))
+(semantic-add-system-include "~/.emacs.d/cpp-headers" 'c++-mode)
+(require 'function-args)
+(fa-config-default)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
