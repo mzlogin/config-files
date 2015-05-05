@@ -129,7 +129,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(fa-face-hint ((t (:background "gold" :foreground "black"))))
+ '(fa-face-hint-bold ((t (:background "gold" :bold t :foreground "black"))))
+ '(fa-face-semi ((t (:foreground "#2a00ff" :background "gold" :bold t))))
+ '(fa-face-type ((t (:foreground "black" :background "gold"))))
+ '(fa-face-type-bold ((t (:foreground "black" :background "gold" :bold t))))
+ '(fa-face-type-definition ((t (:foreground "black" :background "gold")))))
 
 ;; Setting English Font
 (set-face-attribute
