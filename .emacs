@@ -13,6 +13,8 @@
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-hook 'markdown-mode-hook '(lambda ()
+								 (local-set-key (kbd "RET") 'comment-indent-new-line)))
 
 ;; generic settings
 (setq default-directory "~/")
@@ -28,6 +30,7 @@
 (setq default-tab-width 4)
 (setq tab-width 4)
 (setq tab-stop-list (number-sequence 4 120 4))
+(global-set-key (kbd "RET") 'comment-indent-new-line)
 
 (defconst my-c-style
   '((c-tab-always-indent        . t)
