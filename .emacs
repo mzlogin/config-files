@@ -24,8 +24,6 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq backup-directory-alist (quote (("." . "~/.backups"))))
 (setq frame-title-format "%f")
-(add-hook 'eshell-mode-hook '(lambda()
-							  (prefer-coding-system 'gbk)))
 
 ;; indent
 (setq indent-tabs-mode nil)
