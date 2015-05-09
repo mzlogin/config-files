@@ -202,3 +202,6 @@
 (electric-pair-mode)) 
 (when (eval-when-compile (version< "24.4" emacs-version)) 
 (electric-indent-mode 1))
+
+;; ielm
+(add-hook 'ielm-mode-hook '(lambda() (electric-pair-mode 0)))
