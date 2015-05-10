@@ -3,7 +3,7 @@
 ;; set up package repository
 (require 'package)
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.org/packages/") t)
+			 '("melpa" . "http://melpa.org/packages/") t)
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
@@ -24,6 +24,18 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq backup-directory-alist (quote (("." . "~/.backups"))))
 (setq frame-title-format "%f")
+(global-set-key (kbd "M-/") 'hippie-expand)
+(setq hippie-expand-try-functions-list
+      '(try-expand-dabbrev
+        try-expand-dabbrev-all-buffers
+        try-expand-dabbrev-from-kill
+        try-complete-lisp-symbol-partially
+        try-complete-lisp-symbol
+        try-complete-file-name-partially
+        try-complete-file-name
+        try-expand-all-abbrevs
+        try-expand-list
+        try-expand-line))
 
 ;; indent
 (setq indent-tabs-mode nil)
@@ -51,7 +63,7 @@
                                    (knr-argdecl-intro . -)))
     (c-echo-syntactic-information-p . t)
     )
-  "My C Programming Style")
+  "my c programming style")
 
 ;; offset customizations not in my-c-style
 (setq c-offsets-alist '((member-init-intro . ++)))
@@ -75,12 +87,12 @@
 
 ;; helm-gtags
 (setq
-    helm-gtags-ignore-case t
-    helm-gtags-auto-update t
-    helm-gtags-use-input-at-cursor t
-    helm-gtags-pulse-at-cursor t
-    helm-gtags-prefix-key "\C-cg"
-    helm-gtags-suggested-key-mapping t)
+ helm-gtags-ignore-case t
+ helm-gtags-auto-update t
+ helm-gtags-use-input-at-cursor t
+ helm-gtags-pulse-at-cursor t
+ helm-gtags-prefix-key "\C-cg"
+ helm-gtags-suggested-key-mapping t)
 
 (require 'helm-gtags)
 ;; Enable helm-gtags-mode
@@ -109,11 +121,11 @@
 (setq company-idle-delay 0)
 (setq semanticdb-default-save-directory "~/.emacs.d/semanticdb")
 (add-hook 'markdown-mode-hook
-      '(lambda()
-	 (company-mode 0)))
+		  '(lambda()
+			 (company-mode 0)))
 (add-hook 'eshell-mode-hook
-      '(lambda()
-	 (company-mode 0)))
+		  '(lambda()
+			 (company-mode 0)))
 (semantic-add-system-include "~/.emacs.d/cpp-headers" 'c++-mode)
 (require 'function-args)
 (fa-config-default)
@@ -145,8 +157,8 @@
 ;; Setting Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
-		    charset
-		    (font-spec :family "Microsoft Yahei" :size 16)))
+					charset
+					(font-spec :family "Microsoft Yahei" :size 16)))
 
 ;; Maximize after startup
 (run-with-idle-timer 1 nil 'w32-send-sys-command 61488)
@@ -199,9 +211,16 @@
 
 ;; autopair
 (when (fboundp 'electric-pair-mode) 
-(electric-pair-mode)) 
+  (electric-pair-mode)) 
 (when (eval-when-compile (version< "24.4" emacs-version)) 
-(electric-indent-mode 1))
+  (electric-indent-mode 1))
 
 ;; ielm
 (add-hook 'ielm-mode-hook '(lambda() (electric-pair-mode 0)))
+
+;; slime
+(setq inferior-lisp-program "sbcl")
+(require 'slime-autoloads)
+(slime-setup '(slime-fancy))
+(add-hook 'slime-repl-mode-hook '(lambda() (electric-pair-mode 0)))
+(slime-setup '(slime-company))

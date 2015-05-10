@@ -56,6 +56,8 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * download GNU Global from <http://www.gnu.org/software/global/>, and copy files to Emacs directory.
 
+* download sbcl from <http://www.sbcl.org/> and install it to default path.
+
 * copy c++ headers into ~/.emacs.d/cpp-headers
 
 * use elpa in Emacs to install plugins below:
@@ -87,6 +89,10 @@ The Quick Start below is just for self use, I don't promise it will work well in
 	* evil-nerd-commenter
 
 	* function-args
+
+	* slime
+
+	* slime-company
 
     For example to install ggtags:
 
