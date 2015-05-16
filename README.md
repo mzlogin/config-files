@@ -56,11 +56,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * get GNU Emacs in <http://www.gnu.org/software/emacs/>.
 
-* add Emacs bin path to PATH environment varible, set ALTERNATE_EDITOR to runemacs.exe.
-
-	Notice: If you want to use Vim plugins like taglist, add Emacs bin path after Vim bin path, or ctags.exe in Emacs may effect Vim plugins' performance.
-
-* add "Edit with Emacs" to context menu with .reg file (replace emacsclientw.exe file path to yours):
+* add "Edit with Emacs" to context menu with .reg file (replace exe file path to yours first):
 
 	```
 	Windows Registry Editor Version 5.00
@@ -68,7 +64,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 	[HKEY_CLASSES_ROOT\*\shell\Edit with Emacs]
 
 	[HKEY_CLASSES_ROOT\*\shell\Edit with Emacs\command]
-	@="\"D:\\emacs\\bin\\emacsclientw.exe\" \"%1\""
+	@="\"D:\\emacs\\bin\\emacsclientw.exe\" -a \"D:\\emacs\\bin\\runemacs.exe\" \"%1\""
 	```
 
 * download GNU Global from <http://www.gnu.org/software/global/>, and copy files to Emacs directory.
