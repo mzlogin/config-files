@@ -1,3 +1,4 @@
+(server-start)
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 
 ;; set up package repository
@@ -21,6 +22,7 @@
 (set-language-environment "utf-8")
 (prefer-coding-system 'chinese-gbk)
 (prefer-coding-system 'utf-8)
+(set-file-name-coding-system 'chinese-gbk)
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq backup-directory-alist (quote (("." . "~/.backups"))))
 (setq frame-title-format "%f")
