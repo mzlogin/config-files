@@ -10,13 +10,6 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize)
 
-;; markdown
-(autoload 'markdown-mode "markdown-mode"
-  "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-(add-hook 'markdown-mode-hook '(lambda ()
-								 (local-set-key (kbd "RET") 'comment-indent-new-line)))
-
 ;; generic settings
 (setq default-directory "~/")
 (set-language-environment "utf-8")
@@ -40,7 +33,7 @@
         try-expand-line))
 
 ;; indent
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
 (setq tab-width 4)
 (setq tab-stop-list (number-sequence 4 120 4))
@@ -83,6 +76,13 @@
   )
 
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+
+;; markdown
+(autoload 'markdown-mode "markdown-mode"
+  "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-hook 'markdown-mode-hook '(lambda ()
+								 (local-set-key (kbd "RET") 'comment-indent-new-line)))
 
 ;; ggtags
 (require 'ggtags)
@@ -226,3 +226,7 @@
 (slime-setup '(slime-fancy))
 (add-hook 'slime-repl-mode-hook '(lambda() (electric-pair-mode 0)))
 (slime-setup '(slime-company))
+
+;; smooth-scrolling
+(require 'smooth-scrolling)
+(setq smooth-scroll-margin 3)
