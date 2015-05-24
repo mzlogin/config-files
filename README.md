@@ -3,7 +3,7 @@ config-files
 
 Contains config files below.
 
-1. vim config for Win7/Ubuntu via Vundle.
+1. vim config for Mac OS X/Win7/Ubuntu via Vundle.
 
 2. stl views support for gdb.
 
@@ -14,6 +14,41 @@ Contains config files below.
 The Quick Start below is just for self use, I don't promise it will work well in your environment.
 
 ###Quick Start
+
+####Mac OS X
+
+* Set up Vundle:
+
+    ```
+    git clone https://github.com/gmarik/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
+    ```
+
+* install cscope
+
+	If you want to view code, you may need cscope support, so install it.
+
+    ```
+    brew install cscope
+    ```
+
+* generate tags files (*optional*)
+
+	For better c++ coding experience, generate your crttags and win32tags into ~/tags-files dir.
+
+* pull config files:
+
+    ```
+    cd ~
+    git init
+    git remote add origin git@github.com:mzlogin/config-files.git
+    git pull origin master
+    ```
+
+* Install plugins
+
+	Start vim, and exec `:PluginInstall`
+
+* Done!
 
 ####Windows
 
