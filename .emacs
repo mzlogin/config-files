@@ -158,12 +158,14 @@
  'default nil :font "Consolas 11")
 ;; Setting Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font)
+  (if (eq system-type 'windows-nt)
+      (set-fontset-font (frame-parameter nil 'font)
 					charset
-					(font-spec :family "Microsoft Yahei" :size 16)))
+					(font-spec :family "Microsoft Yahei" :size 16))))
 
 ;; Maximize after startup
-(run-with-idle-timer 1 nil 'w32-send-sys-command 61488)
+(if (eq system-type 'windows-nt)
+    (run-with-idle-timer 1 nil 'w32-send-sys-command 61488))
 
 ;; ido-mode for open file tips
 (ido-mode t)

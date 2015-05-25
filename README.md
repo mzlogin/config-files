@@ -17,6 +17,8 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 ####Mac OS X
 
+**Vim**
+
 * Set up Vundle:
 
     ```
@@ -49,6 +51,67 @@ The Quick Start below is just for self use, I don't promise it will work well in
 	Start vim, and exec `:PluginInstall`
 
 * Done!
+
+**Emacs**
+
+* install the newest version of GNU Emacs, global and sbcl
+
+    ```
+    brew install emacs
+    brew install global
+    brew install sbcl
+    ```
+* create file /usr/bin/sbcl and change its content to
+
+    ```
+    #!/bin/sh
+    exec /usr/local/bin/sbcl "$@"
+    ```
+
+* copy c++ headers into ~/.emacs.d/cpp-headers
+
+* use elpa in Emacs to install plugins below:
+
+    * company
+
+    * ggtags
+
+	* helm-gtags
+
+    * markdown-mode
+
+	* projectile
+
+	* sr-speedbar
+
+	* smex
+
+	* evil
+
+	* jedi
+		* pip install virtualenv
+	    * M-x package-install <RETURN> jedi <RETURN>
+		* M-x package-install <RETURN> exec-path-from-shell <RETURN>
+		* restart emacs
+		* M-x exec-path-from-shell-initialize
+		* M-x jedi:install-server
+
+	* evil-nerd-commenter
+
+	* function-args
+
+	* slime
+
+	* slime-company
+
+	* smooth-scrolling
+
+    For example to install ggtags:
+
+    ```
+    M-x package-install <RETURN>
+    ggtags <RETURN>
+    ```
 
 ####Windows
 
