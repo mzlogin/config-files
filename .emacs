@@ -137,7 +137,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (tango-dark)))
+ ;; '(custom-enabled-themes (quote (tango-dark)))
  '(global-linum-mode t)
  '(inhibit-startup-screen t)
  '(tool-bar-mode nil))
@@ -153,19 +153,30 @@
  '(fa-face-type-bold ((t (:foreground "black" :background "gold" :bold t))))
  '(fa-face-type-definition ((t (:foreground "black" :background "gold")))))
 
-;; Setting English Font
-(set-face-attribute
- 'default nil :font "Consolas 11")
-;; Setting Chinese Font
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (if (eq system-type 'windows-nt)
-      (set-fontset-font (frame-parameter nil 'font)
-					charset
-					(font-spec :family "Microsoft Yahei" :size 16))))
+(defun windows-nt-spec-settings()
+  ;; Setting English Font
+  (set-face-attribute
+    'default nil :font "Consolas 11")
+  ;; Setting Chinese Font
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset
+                      (font-spec :family "Microsoft Yahei" :size 16)))
+  ;; Maximize after startup
+  (run-with-idle-timer 1 nil 'w32-send-sys-command 61488)
+  ;; Set theme
+  (load-theme 'tango-dark)
+  )
 
-;; Maximize after startup
-(if (eq system-type 'windows-nt)
-    (run-with-idle-timer 1 nil 'w32-send-sys-command 61488))
+(defun mac-spec-settings()
+  ;; Setting Font
+  (set-default-font "-*-Menlo-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+  )
+
+(cond
+  ((eq system-type 'windows-nt) (windows-nt-spec-settings))
+  ((eq system-type 'darwin) (mac-spec-settings))
+  )
 
 ;; ido-mode for open file tips
 (ido-mode t)
