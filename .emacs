@@ -171,6 +171,7 @@
 (defun mac-spec-settings()
   ;; Setting Font
   (set-default-font "-*-Menlo-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+  (toggle-frame-fullscreen)
   )
 
 (cond
