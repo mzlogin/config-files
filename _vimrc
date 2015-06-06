@@ -68,6 +68,9 @@ set expandtab
 if has("gui_running")
     if has("win32")
         au GUIEnter * simalt ~x
+    elseif has("gui_macvim")
+        set guifont=Menlo:h13
+        set fullscreen
     else
         set guifont=Ubuntu\ Mono\ 12
     endif
