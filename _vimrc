@@ -70,7 +70,8 @@ if has("gui_running")
         au GUIEnter * simalt ~x
     elseif has("gui_macvim")
         set guifont=Menlo:h13
-        set fullscreen
+"        set fullscreen
+        set lines=40 columns=140
     else
         set guifont=Ubuntu\ Mono\ 12
     endif
