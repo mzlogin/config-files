@@ -12,9 +12,6 @@ Plugin 'gmarik/Vundle.vim'
 " file explorer
 Plugin 'scrooloose/nerdtree'
 
-" file finder
-Plugin 'kien/ctrlp.vim'
-
 " taglist
 Plugin 'vim-scripts/taglist.vim'
 
@@ -43,6 +40,9 @@ Plugin 'vim-scripts/DrawIt'
 
 " js formatter
 Plugin 'vim-scripts/jsbeautify'
+
+" fuzzy find files, buffers, mrus
+Plugin 'Yggdroot/LeaderF'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -167,9 +167,5 @@ set completeopt=menuone,menu,longest
 let Tlist_Show_One_File = 1
 let Tlist_Sort_Type = "name"
 
-" ctrlp settings
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
-let g:ctrlp_match_window_bottom = 1
-let g:ctrlp_max_height = 10
-let g:ctrlp_max_files = 0
-let g:ctrlp_cmd = 'CtrlPMixed'
+" LeaderF settings
+nnoremap <silent> <leader>m :LeaderfMru<CR>
