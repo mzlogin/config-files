@@ -44,6 +44,9 @@ Plugin 'vim-scripts/jsbeautify'
 " fuzzy find files, buffers, mrus
 Plugin 'Yggdroot/LeaderF'
 
+" indention levels
+Plugin 'Yggdroot/indentLine'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -69,18 +72,22 @@ if has("gui_running")
     if has("win32")
         au GUIEnter * simalt ~x
     elseif has("gui_macvim")
-        set guifont=Menlo:h13
+        set guifont=Monaco:h13
 "        set fullscreen
         set lines=40 columns=140
     else
         set guifont=Ubuntu\ Mono\ 12
     endif
+    set cursorline      " highlight current line
     set guioptions-=m   "menu
     set guioptions-=T   "toolbar
 endif
 
 "line number
 set nu
+
+" search ignore case
+set ignorecase
 
 " encoding
 set encoding=utf-8
