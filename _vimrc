@@ -50,6 +50,9 @@ Plugin 'Yggdroot/indentLine'
 " brackets auto pair
 Plugin 'jiangmiao/auto-pairs'
 
+" web indent
+Plugin 'lukaszb/vim-web-indent'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -172,6 +175,9 @@ endif
 " autoclose complete window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
 set completeopt=menuone,menu,longest
+
+au Filetype html,php,javascript setl shiftwidth=2
+au Filetype html,php,javascript setl tabstop=2
 
 " taglist settings
 let Tlist_Show_One_File = 1
