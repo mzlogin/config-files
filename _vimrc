@@ -176,8 +176,8 @@ endif
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
 set completeopt=menuone,menu,longest
 
-au Filetype html,php,javascript setl shiftwidth=2
-au Filetype html,php,javascript setl tabstop=2
+au Filetype html,php,javascript,xml setl shiftwidth=2
+au Filetype html,php,javascript,xml setl tabstop=2
 
 " taglist settings
 let Tlist_Show_One_File = 1
