@@ -141,15 +141,26 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-h> <C-w>h
 
-" insert mode move settings
-inoremap <A-l> <Right>
-inoremap <A-j> <Down>
-inoremap <A-k> <Up>
-inoremap <A-h> <Left>
-
-" select auto complete item
-inoremap <A-n> <C-n>
-inoremap <A-p> <C-p>
+if has("gui_macvim")
+    " auto-complete
+    inoremap <D-/> <C-x><C-o>
+    " insert mode move settings
+    inoremap ¬ <C-o>l
+    inoremap ∆ <C-o>j
+    inoremap ˚ <C-o>k
+    inoremap ˙ <C-o>h
+else
+    " auto-complete
+    inoremap <A-/> <C-x><C-o>
+    " insert mode move settings
+    inoremap <A-l> <C-o>l
+    inoremap <A-j> <C-o>j
+    inoremap <A-k> <C-o>k
+    inoremap <A-h> <C-o>h
+    " select auto complete item
+    inoremap <A-n> <C-n>
+    inoremap <A-p> <C-p>
+endif
 
 " folding
 set foldmethod=syntax
@@ -162,7 +173,6 @@ set cino+=:0,g0
 " C++ auto-complete
 nnoremap <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 nnoremap <C-F11> :!cscope -Rb <CR>
-inoremap <A-/> <C-x><C-o>
 let OmniCpp_ShowPrototypeInAbbr = 1 
 let OmniCpp_MayCompleteScope = 1 
 
