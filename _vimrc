@@ -145,18 +145,18 @@ if has("gui_macvim")
     " auto-complete
     inoremap <D-/> <C-x><C-o>
     " insert mode move settings
-    inoremap ¬ <C-o>l
-    inoremap ∆ <C-o>j
-    inoremap ˚ <C-o>k
-    inoremap ˙ <C-o>h
+    inoremap ¬ <Right>
+    inoremap ∆ <Down>
+    inoremap ˚ <Up>
+    inoremap ˙ <Left>
 else
     " auto-complete
     inoremap <A-/> <C-x><C-o>
     " insert mode move settings
-    inoremap <A-l> <C-o>l
-    inoremap <A-j> <C-o>j
-    inoremap <A-k> <C-o>k
-    inoremap <A-h> <C-o>h
+    inoremap <A-l> <Right>
+    inoremap <A-j> <Down>
+    inoremap <A-k> <Up>
+    inoremap <A-h> <Left>
     " select auto complete item
     inoremap <A-n> <C-n>
     inoremap <A-p> <C-p>
