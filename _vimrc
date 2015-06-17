@@ -195,3 +195,7 @@ let Tlist_Sort_Type = "name"
 
 " LeaderF settings
 nnoremap <silent> <leader>m :LeaderfMru<CR>
+
+" auto-pairs seetings
+let g:AutoPairsShortcutToggle = ''
+let g:AutoPairsShortcutJump = ''
