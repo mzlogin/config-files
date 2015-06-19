@@ -45,7 +45,7 @@ Plugin 'vim-scripts/jsbeautify'
 Plugin 'Yggdroot/LeaderF'
 
 " indention levels
-Plugin 'Yggdroot/indentLine'
+"Plugin 'Yggdroot/indentLine'
 
 " brackets auto pair
 Plugin 'jiangmiao/auto-pairs'
