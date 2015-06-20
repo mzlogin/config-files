@@ -80,7 +80,7 @@ if has("gui_running")
     elseif has("gui_macvim")
         set guifont=Monaco:h13
 "        set fullscreen
-        set lines=40 columns=140
+        set lines=60 columns=160
     else
         set guifont=Ubuntu\ Mono\ 12
     endif
