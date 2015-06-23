@@ -53,6 +53,9 @@ Plugin 'jiangmiao/auto-pairs'
 " web indent
 Plugin 'lukaszb/vim-web-indent'
 
+" java decompile
+Plugin 'kelwin/vim-smali'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
