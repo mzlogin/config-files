@@ -202,3 +202,6 @@ nnoremap <silent> <leader>m :LeaderfMru<CR>
 " auto-pairs seetings
 let g:AutoPairsShortcutToggle = ''
 let g:AutoPairsShortcutJump = ''
+
+" smali language
+let g:tlist_smali_settings = "smali;f:field;m:method"
