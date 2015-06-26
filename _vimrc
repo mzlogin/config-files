@@ -166,7 +166,7 @@ else
 endif
 
 " folding
-set foldmethod=syntax
+set foldmethod=indent
 set foldcolumn=1
 set foldlevelstart=99
 
