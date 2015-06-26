@@ -200,8 +200,9 @@ let Tlist_Sort_Type = "name"
 nnoremap <silent> <leader>m :LeaderfMru<CR>
 
 " auto-pairs seetings
-let g:AutoPairsShortcutToggle = ''
+let g:AutoPairsShortcutToggle = '<leader>p'
 let g:AutoPairsShortcutJump = ''
+let g:AutoPairsMapSpace = 0
 
 " smali language
 let g:tlist_smali_settings = "smali;f:field;m:method"
