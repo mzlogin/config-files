@@ -152,6 +152,7 @@ if has("gui_macvim")
     inoremap ∆ <Down>
     inoremap ˚ <Up>
     inoremap ˙ <Left>
+    let g:AutoPairsShortcutFastWrap = '<D-e>'
 else
     " auto-complete
     inoremap <A-/> <C-x><C-o>
