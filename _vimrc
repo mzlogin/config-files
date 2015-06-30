@@ -53,6 +53,9 @@ Plugin 'jiangmiao/auto-pairs'
 " web indent
 Plugin 'lukaszb/vim-web-indent'
 
+" h5
+Plugin 'mattn/emmet-vim'
+
 " java decompile
 Plugin 'kelwin/vim-smali'
 
@@ -190,8 +193,8 @@ endif
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
 set completeopt=menuone,menu,longest
 
-au Filetype html,php,javascript,xml setl shiftwidth=2
-au Filetype html,php,javascript,xml setl tabstop=2
+au Filetype html,php,javascript,xml,css setl shiftwidth=2
+au Filetype html,php,javascript,xml,css setl tabstop=2
 
 " taglist settings
 let Tlist_Show_One_File = 1
@@ -207,3 +210,7 @@ let g:AutoPairsMapSpace = 0
 
 " smali language
 let g:tlist_smali_settings = "smali;f:field;m:method"
+
+" emmet
+let g:user_emmet_install_global = 0
+au FileType html,css EmmetInstall
