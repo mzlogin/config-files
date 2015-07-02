@@ -7,3 +7,4 @@
 .emacs.d/*
 !/.emacs.d/site-lisp
 !.ctags
+!.ycm_extra_conf.py

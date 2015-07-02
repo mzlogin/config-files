@@ -59,6 +59,12 @@ Plugin 'mattn/emmet-vim'
 " java decompile
 Plugin 'kelwin/vim-smali'
 
+
+if has("gui_macvim")
+    " YCM
+    Plugin 'Valloric/YouCompleteMe'
+endif
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -156,6 +162,8 @@ if has("gui_macvim")
     inoremap ˚ <Up>
     inoremap ˙ <Left>
     let g:AutoPairsShortcutFastWrap = '<D-e>'
+    let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+    nnoremap <leader>g :YcmCompleter GoTo<CR>
 else
     " auto-complete
     inoremap <A-/> <C-x><C-o>
@@ -207,6 +215,7 @@ nnoremap <silent> <leader>m :LeaderfMru<CR>
 let g:AutoPairsShortcutToggle = '<leader>p'
 let g:AutoPairsShortcutJump = ''
 let g:AutoPairsMapSpace = 0
+au FileType c,cpp let b:AutoPairs = {'[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
 
 " smali language
 let g:tlist_smali_settings = "smali;f:field;m:method"

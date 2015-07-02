@@ -50,6 +50,17 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 	Start vim, and exec `:PluginInstall`
 
+* Build YouCompleteMe plugin
+
+    Confirm you have `libclang.dylib`, and then
+
+    ```
+    brew install cmake
+    cd ~/vimfiles/bundle/YouComplete
+    git submodule update --init --recursive
+    ./install.sh --clang-completer --system-libclang
+    ```
+
 * Done!
 
 **Emacs**
