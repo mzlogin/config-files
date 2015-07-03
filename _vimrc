@@ -59,6 +59,7 @@ Plugin 'mattn/emmet-vim'
 " java decompile
 Plugin 'kelwin/vim-smali'
 
+Plugin 'hynek/vim-python-pep8-indent'
 
 if has("gui_macvim")
     Plugin 'Valloric/YouCompleteMe'
