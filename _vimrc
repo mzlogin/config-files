@@ -12,8 +12,8 @@ Plugin 'gmarik/Vundle.vim'
 " file explorer
 Plugin 'scrooloose/nerdtree'
 
-" taglist
-Plugin 'vim-scripts/taglist.vim'
+" tagbar
+Plugin 'majutsushi/tagbar'
 
 " cscope autoload and key map
 Plugin 'mzlogin/cscope_macros.vim'
@@ -43,9 +43,6 @@ Plugin 'vim-scripts/jsbeautify'
 
 " fuzzy find files, buffers, mrus
 Plugin 'Yggdroot/LeaderF'
-
-" indention levels
-"Plugin 'Yggdroot/indentLine'
 
 " brackets auto pair
 Plugin 'jiangmiao/auto-pairs'
@@ -144,6 +141,7 @@ set incsearch
 
 " NERDTree settings
 let NERDTreeWinPos=1
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 " move across lines
 set backspace=indent,eol,start
@@ -193,20 +191,40 @@ let OmniCpp_MayCompleteScope = 1
 
 " Java auto-complete
 if has("autocmd")
-    autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-    autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
+    autocmd FileType java setlocal omnifunc=javacomplete#Complete
+    autocmd FileType java setlocal completefunc=javacomplete#CompleteParamsInfo
 endif
 
 " autoclose complete window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
 set completeopt=menuone,menu,longest
 
-au Filetype html,php,javascript,xml,css setl shiftwidth=2
-au Filetype html,php,javascript,xml,css setl tabstop=2
+au FileType html,php,javascript,xml,css setl shiftwidth=2
+au FileType html,php,javascript,xml,css setl tabstop=2
 
-" taglist settings
-let Tlist_Show_One_File = 1
-let Tlist_Sort_Type = "name"
+" tagbar settings
+nnoremap <leader>t :TagbarToggle<CR>
+let g:tagbar_width = 30
+let g:tagbar_left = 1
+let g:tagbar_type_smali = {
+        \ 'ctagstype' : 'smali',
+        \ 'kinds' : [
+                \ 'f:field',
+                \ 'm:method',
+        \ ]
+\ }
+au FileType markdown let g:tagbar_sort = 0
+let g:tagbar_type_markdown = {
+        \ 'ctagstype' : 'markdown',
+        \ 'kinds' : [
+                \ 'h:Heading_L1',
+                \ 'i:Heading_L2',
+                \ 'j:Heading_L3',
+                \ 'k:Heading_L4',
+                \ 'l:Heading_L5',
+                \ 'm:Heading_L6',
+        \ ]
+\ }
 
 " LeaderF settings
 nnoremap <silent> <leader>m :LeaderfMru<CR>
@@ -216,9 +234,6 @@ let g:AutoPairsShortcutToggle = '<leader>p'
 let g:AutoPairsShortcutJump = ''
 "let g:AutoPairsMapSpace = 0
 au FileType c,cpp let b:AutoPairs = {'[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
-
-" smali language
-let g:tlist_smali_settings = "smali;f:field;m:method"
 
 " emmet
 let g:user_emmet_install_global = 0
