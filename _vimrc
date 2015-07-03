@@ -214,7 +214,7 @@ nnoremap <silent> <leader>m :LeaderfMru<CR>
 " auto-pairs seetings
 let g:AutoPairsShortcutToggle = '<leader>p'
 let g:AutoPairsShortcutJump = ''
-let g:AutoPairsMapSpace = 0
+"let g:AutoPairsMapSpace = 0
 au FileType c,cpp let b:AutoPairs = {'[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
 
 " smali language
