@@ -61,8 +61,9 @@ Plugin 'kelwin/vim-smali'
 
 
 if has("gui_macvim")
-    " YCM
     Plugin 'Valloric/YouCompleteMe'
+elseif has("win32")
+    Plugin 'Valloric/YouCompleteMe', {'pinned': 1}
 endif
 
 " All of your Plugins must be added before the following line
@@ -162,8 +163,6 @@ if has("gui_macvim")
     inoremap ˚ <Up>
     inoremap ˙ <Left>
     let g:AutoPairsShortcutFastWrap = '<D-e>'
-    let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-    nnoremap <leader>g :YcmCompleter GoTo<CR>
 else
     " auto-complete
     inoremap <A-/> <C-x><C-o>
@@ -223,3 +222,7 @@ let g:tlist_smali_settings = "smali;f:field;m:method"
 " emmet
 let g:user_emmet_install_global = 0
 au FileType html,css EmmetInstall
+
+" YCM
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+nnoremap <leader>g :YcmCompleter GoTo<CR>
