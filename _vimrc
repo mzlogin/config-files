@@ -244,3 +244,6 @@ au FileType html,css EmmetInstall
 " YCM
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 nnoremap <leader>g :YcmCompleter GoTo<CR>
+
+" MiniBufferExplorer
+nnoremap <leader>e :MBEToggle<CR>
