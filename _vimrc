@@ -235,6 +235,7 @@ let g:AutoPairsShortcutToggle = '<leader>p'
 let g:AutoPairsShortcutJump = ''
 "let g:AutoPairsMapSpace = 0
 au FileType c,cpp let b:AutoPairs = {'[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
+au FileType smali let b:AutoPairs = {'(':')', '{':'}',"'":"'",'"':'"', '`':'`'}
 
 " emmet
 let g:user_emmet_install_global = 0
