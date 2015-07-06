@@ -201,6 +201,7 @@ set completeopt=menuone,menu,longest
 
 au FileType html,php,javascript,xml,css setl shiftwidth=2
 au FileType html,php,javascript,xml,css setl tabstop=2
+au FileType smali setl cindent
 
 " tagbar settings
 nnoremap <leader>t :TagbarToggle<CR>
