@@ -247,3 +247,12 @@ nnoremap <leader>g :YcmCompleter GoTo<CR>
 
 " MiniBufferExplorer
 nnoremap <leader>e :MBEToggle<CR>
+
+" commentify
+function EnhCommentifyCallback(ft)
+    if a:ft == 'smali'
+        let b:ECcommentOpen = '#'
+        let b:ECcommentClose = ''
+    endif
+endfunction
+let g:EnhCommentifyCallbackExists = 'Yes'
