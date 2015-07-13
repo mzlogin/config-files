@@ -141,6 +141,7 @@ set incsearch
 
 " NERDTree settings
 let NERDTreeWinPos=1
+let g:NERDTreeIgnore = ['\~$', '\.pyc']
 nnoremap <leader>n :NERDTreeToggle<CR>
 
 " move across lines
@@ -249,10 +250,12 @@ nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>e :MBEToggle<CR>
 
 " commentify
-function EnhCommentifyCallback(ft)
-    if a:ft == 'smali'
-        let b:ECcommentOpen = '#'
-        let b:ECcommentClose = ''
-    endif
-endfunction
-let g:EnhCommentifyCallbackExists = 'Yes'
+if !exists('g:EnhCommentifyCallbackExists')
+    function EnhCommentifyCallback(ft)
+        if a:ft == 'smali'
+            let b:ECcommentOpen = '#'
+            let b:ECcommentClose = ''
+        endif
+    endfunction
+    let g:EnhCommentifyCallbackExists = 'Yes'
+endif
