@@ -230,6 +230,7 @@ let g:tagbar_type_markdown = {
 
 " LeaderF settings
 nnoremap <silent> <leader>m :LeaderfMru<CR>
+let g:Lf_DefaultMode = 1
 
 " auto-pairs seetings
 let g:AutoPairsShortcutToggle = '<leader>p'
