@@ -50,6 +50,9 @@ Plugin 'jiangmiao/auto-pairs'
 " web indent
 Plugin 'lukaszb/vim-web-indent'
 
+" Qml
+Plugin 'peterhoeg/vim-qml'
+
 " h5
 Plugin 'mattn/emmet-vim'
 
