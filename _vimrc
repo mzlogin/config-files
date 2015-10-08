@@ -56,6 +56,9 @@ Plugin 'peterhoeg/vim-qml'
 " h5
 Plugin 'mattn/emmet-vim'
 
+" chinese copywriting
+Plugin 'hotoo/pangu.vim'
+
 " java decompile
 Plugin 'kelwin/vim-smali'
 
