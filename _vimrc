@@ -62,7 +62,11 @@ Plugin 'hotoo/pangu.vim'
 " java decompile
 Plugin 'kelwin/vim-smali'
 
+" python
 Plugin 'hynek/vim-python-pep8-indent'
+
+" table mode mostly for markdown
+Plugin 'dhruvasagar/vim-table-mode'
 
 if has("gui_macvim")
     Plugin 'Valloric/YouCompleteMe'
@@ -211,7 +215,7 @@ au FileType html,php,javascript,xml,css setl tabstop=2
 au FileType smali setl cindent
 
 " tagbar settings
-nnoremap <leader>t :TagbarToggle<CR>
+nnoremap <leader>tb :TagbarToggle<CR>
 let g:tagbar_width = 30
 let g:tagbar_left = 1
 let g:tagbar_type_smali = {
@@ -266,3 +270,8 @@ if !exists('g:EnhCommentifyCallbackExists')
     endfunction
     let g:EnhCommentifyCallbackExists = 'Yes'
 endif
+
+" table mode
+let g:table_mode_corner = '|'
+let g:table_mode_delimiter = ' '
+au FileType markdown TableModeEnable
