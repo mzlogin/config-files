@@ -86,15 +86,15 @@ filetype plugin indent on    " required
 " leader
 let mapleader="\\"
 
-"tab=4
+" tab=4
 set shiftwidth=4
 set sts=4
 set tabstop=4
 
-"tab->white space
+" tab->white space
 set expandtab
 
-"gui options
+" gui options
 if has("gui_running")
     if has("win32")
         au GUIEnter * simalt ~x
@@ -106,11 +106,11 @@ if has("gui_running")
         set guifont=Ubuntu\ Mono\ 12
     endif
     set cursorline      " highlight current line
-    set guioptions-=m   "menu
-    set guioptions-=T   "toolbar
+    set guioptions-=m   " menu
+    set guioptions-=T   " toolbar
 endif
 
-"line number
+" line number
 set nu
 
 " search ignore case
@@ -118,7 +118,7 @@ set ignorecase
 
 " encoding
 set encoding=utf-8
-set fileencodings=ucs-bom,utf-8,cp936,big5,latin-1   "ucs-bom, compatible notepad UTF-8 with first three bytes is EFBBBF
+set fileencodings=ucs-bom,utf-8,cp936,big5,latin-1   " ucs-bom, compatible notepad UTF-8 with first three bytes is EFBBBF
 
 " menu and bottom messy code
 source $VIMRUNTIME/delmenu.vim   
@@ -127,7 +127,7 @@ if has("win32")
     language messages zh_US.utf-8 
 endif
 
-"color scheme
+" color scheme
 colorscheme desert 
 
 " Ctags
@@ -255,6 +255,7 @@ au FileType html,css EmmetInstall
 
 " YCM
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 
 " MiniBufferExplorer
@@ -275,3 +276,7 @@ endif
 let g:table_mode_corner = '|'
 let g:table_mode_delimiter = ' '
 au FileType markdown TableModeEnable
+
+" snippets via mzlogin/code_complete
+let g:author_for_snippets = 'Zhuang Ma'
+let g:email_for_snippets = 'chumpma(at)gmail.com'
