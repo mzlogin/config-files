@@ -91,7 +91,7 @@ let mapleader="\\"
 
 " tab=4
 set shiftwidth=4
-set sts=4
+set softtabstop=4
 set tabstop=4
 
 " tab->white space
@@ -114,7 +114,7 @@ if has("gui_running")
 endif
 
 " line number
-set nu
+set number
 
 " search ignore case
 set ignorecase
@@ -154,7 +154,7 @@ set incsearch
 
 " move across lines
 set backspace=indent,eol,start
-set ww+=b,<,>
+set whichwrap+=b,<,>
 
 " folding
 set foldmethod=indent
