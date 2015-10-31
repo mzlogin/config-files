@@ -1,3 +1,4 @@
+" Vundle settings {{{
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -82,7 +83,9 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+" }}}
 
+" Basic settings {{{
 " leader
 let mapleader="\\"
 
@@ -97,7 +100,7 @@ set expandtab
 " gui options
 if has("gui_running")
     if has("win32")
-        au GUIEnter * simalt ~x
+        autocmd GUIEnter * simalt ~x
     elseif has("gui_macvim")
         set guifont=Monaco:h13
 "        set fullscreen
@@ -149,15 +152,31 @@ syntax on
 set hlsearch
 set incsearch
 
-" NERDTree settings
-let NERDTreeWinPos=1
-let g:NERDTreeIgnore = ['\~$', '\.pyc']
-nnoremap <leader>n :NERDTreeToggle<CR>
-
 " move across lines
 set backspace=indent,eol,start
 set ww+=b,<,>
 
+" folding
+set foldmethod=indent
+set foldcolumn=1
+set foldlevelstart=99
+
+" no indent for case, default, public, private and protected
+set cino+=:0,g0
+
+" autoclose complete window
+autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
+set completeopt=menuone,menu,longest
+" }}}
+
+" FileType specific settings {{{
+autocmd FileType html,php,javascript,xml,css setlocal shiftwidth=2
+autocmd FileType html,php,javascript,xml,css setlocal tabstop=2
+autocmd FileType smali setlocal cindent
+autocmd FileType vim setlocal foldmethod=marker
+" }}}
+
+" Common mappings {{{
 " split window switch key map
 noremap <C-l> <C-w>l
 noremap <C-j> <C-w>j
@@ -172,7 +191,6 @@ if has("gui_macvim")
     inoremap ∆ <Down>
     inoremap ˚ <Up>
     inoremap ˙ <Left>
-    let g:AutoPairsShortcutFastWrap = '<D-e>'
 else
     " auto-complete
     inoremap <A-/> <C-x><C-o>
@@ -186,35 +204,25 @@ else
     inoremap <A-p> <C-p>
 endif
 
-" folding
-set foldmethod=indent
-set foldcolumn=1
-set foldlevelstart=99
+" }}}
 
-" no indent for case, default, public, private and protected
-set cino+=:0,g0
+" Plugin settings {{{
+" nerdtree
+let NERDTreeWinPos=1
+let g:NERDTreeIgnore = ['\~$', '\.pyc']
+nnoremap <leader>n :NERDTreeToggle<CR>
 
-" C++ auto-complete
+" OmniCppComplete
 nnoremap <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 nnoremap <C-F11> :!cscope -Rb <CR>
 let OmniCpp_ShowPrototypeInAbbr = 1 
 let OmniCpp_MayCompleteScope = 1 
 
-" Java auto-complete
-if has("autocmd")
-    autocmd FileType java setlocal omnifunc=javacomplete#Complete
-    autocmd FileType java setlocal completefunc=javacomplete#CompleteParamsInfo
-endif
+" javacomplete
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+autocmd FileType java setlocal completefunc=javacomplete#CompleteParamsInfo
 
-" autoclose complete window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
-set completeopt=menuone,menu,longest
-
-au FileType html,php,javascript,xml,css setl shiftwidth=2
-au FileType html,php,javascript,xml,css setl tabstop=2
-au FileType smali setl cindent
-
-" tagbar settings
+" tagbar
 nnoremap <leader>tb :TagbarToggle<CR>
 let g:tagbar_width = 30
 let g:tagbar_left = 1
@@ -225,7 +233,7 @@ let g:tagbar_type_smali = {
                 \ 'm:method',
         \ ]
 \ }
-au FileType markdown let g:tagbar_sort = 0
+autocmd FileType markdown let g:tagbar_sort = 0
 let g:tagbar_type_markdown = {
         \ 'ctagstype' : 'markdown',
         \ 'kinds' : [
@@ -238,30 +246,33 @@ let g:tagbar_type_markdown = {
         \ ]
 \ }
 
-" LeaderF settings
+" LeaderF
 nnoremap <silent> <leader>m :LeaderfMru<CR>
 let g:Lf_DefaultMode = 1
 
-" auto-pairs seetings
+" auto-pairs
 let g:AutoPairsShortcutToggle = '<leader>p'
 let g:AutoPairsShortcutJump = ''
 "let g:AutoPairsMapSpace = 0
-au FileType c,cpp let b:AutoPairs = {'[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
-au FileType smali let b:AutoPairs = {'(':')', '{':'}',"'":"'",'"':'"', '`':'`'}
+autocmd FileType c,cpp let b:AutoPairs = {'[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
+autocmd FileType smali let b:AutoPairs = {'(':')', '{':'}',"'":"'",'"':'"', '`':'`'}
+if has("gui_macvim")
+    let g:AutoPairsShortcutFastWrap = '<D-e>'
+endif
 
-" emmet
+" emmet-vim
 let g:user_emmet_install_global = 0
-au FileType html,css EmmetInstall
+autocmd FileType html,css EmmetInstall
 
-" YCM
+" YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 
-" MiniBufferExplorer
+" minibufexpl.vim
 nnoremap <leader>e :MBEToggle<CR>
 
-" commentify
+" EnhCommentify.vim
 if !exists('g:EnhCommentifyCallbackExists')
     function EnhCommentifyCallback(ft)
         if a:ft == 'smali'
@@ -272,11 +283,12 @@ if !exists('g:EnhCommentifyCallbackExists')
     let g:EnhCommentifyCallbackExists = 'Yes'
 endif
 
-" table mode
+" vim-table-mode
 let g:table_mode_corner = '|'
 let g:table_mode_delimiter = ' '
-au FileType markdown TableModeEnable
+autocmd FileType markdown TableModeEnable
 
-" snippets via mzlogin/code_complete
+" code_complete
 let g:author_for_snippets = 'Zhuang Ma'
 let g:email_for_snippets = 'chumpma(at)gmail.com'
+" }}}
