@@ -61,7 +61,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'hotoo/pangu.vim'
 
 " java decompile
-Plugin 'kelwin/vim-smali'
+Plugin 'mzlogin/vim-smali'
 
 " python
 Plugin 'hynek/vim-python-pep8-indent'
