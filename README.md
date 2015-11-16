@@ -171,9 +171,10 @@ The Quick Start below is just for self use, I don't promise it will work well in
 * Config YouCompleteMe
     * Install LLVM/Clang for windows and add libclang.dll path to PATH environment variable.
     * Download [Vim YouCompleteMe for Windows](https://bitbucket.org/Alexander-Shukaev/vim-youcompleteme-for-windows), and then unzip it to %userprofile%/vimfiles/bundle/YouCompleteMe.
-        **You may meet some pitfalls in this step, keep easy and see Overview and Issues in the above link.**
 
     **Notice:** Your Vim/Clang/YCM should be all x86 or all x64, keep them consistent.
+
+    **You may meet some pitfalls in this step, keep easy and see Overview and Issues in the above link.**
 
 * Done!
 
