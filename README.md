@@ -42,7 +42,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
     ```
     cd ~
     git init
-    git remote add origin git@github.com:mzlogin/config-files.git
+    git remote add origin https://github.com/mzlogin/config-files.git
     git pull origin master
     ```
 
@@ -136,7 +136,9 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * place ctags.exe
 
-	The plugin taglist required ctags.exe, so download it, and put it into YourVimInstallPath/vim74/ directory.
+	The plugin taglist required **Exuberant Ctags**, so download it, and put it into YourVimInstallPath/vim74/ directory.
+
+    (You can download ctags and cscope I am used [here](http://pan.baidu.com/s/1c06ucTi).)
 
 * place cscope.exe (*optional*)
 
@@ -151,7 +153,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
     ```
     cd %userprofile%
     git init
-    git remote add origin git@github.com:mzlogin/config-files.git
+    git remote add origin https://github.com/mzlogin/config-files.git
     git pull origin master
     ```
 
@@ -265,7 +267,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
     ```
     cd ~
     git init
-    git remote add origin git@github.com:mzlogin/config-files.git
+    git remote add origin https://github.com/mzlogin/config-files.git
     git pull origin master
     ```
 
