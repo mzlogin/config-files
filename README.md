@@ -13,9 +13,16 @@ Contains config files below.
 
 The Quick Start below is just for self use, I don't promise it will work well in your environment.
 
-###Quick Start
+### Contents
 
-####Mac OS X
+* [Quick Start](#quick-start)
+    * [Mac OS X](#mac-os-x)
+    * [Windows](#windows)
+    * [Ubuntu](#ubuntu)
+
+### Quick Start
+
+#### Mac OS X
 
 **Vim**
 
@@ -124,7 +131,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
     ggtags <RETURN>
     ```
 
-####Windows
+#### Windows
 
 **Vim**
 
@@ -163,8 +170,8 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * Config YouCompleteMe
     * Install LLVM/Clang for windows and add libclang.dll path to PATH environment variable.
-    * Download [pre-built and ready-to-use distributions of YCM for Windows](https://bitbucket.org/Haroogan/vim-youcompleteme-for-windows), and then unzip it to %userprofile%/vimfiles/bundle/YouCompleteMe.
-        You may meet some pitfalls in this step, keep easy and see Overview and Issues in the above link.
+    * Download [Vim YouCompleteMe for Windows](https://bitbucket.org/Alexander-Shukaev/vim-youcompleteme-for-windows), and then unzip it to %userprofile%/vimfiles/bundle/YouCompleteMe.
+        **You may meet some pitfalls in this step, keep easy and see Overview and Issues in the above link.**
 
     **Notice:** Your Vim/Clang/YCM should be all x86 or all x64, keep them consistent.
 
@@ -234,7 +241,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
     ggtags <RETURN>
     ```
 
-####Ubuntu
+#### Ubuntu
 
 * Set up Vundle:
 
