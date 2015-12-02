@@ -168,7 +168,13 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 	Start vim, and exec `:PluginInstall`
 
-* Config YouCompleteMe
+* place iconv.dll
+
+    The plugin fencview, for file encoding detect and switch, required this dll, so download one and add its path to PATH environment variable.
+
+    (You can download iconv.dll I am used [here](http://pan.baidu.com/s/1pJGOpCJ).)
+
+* Config YouCompleteMe (*optional*)
     * Install LLVM/Clang for windows and add libclang.dll path to PATH environment variable.
     * Download [Vim YouCompleteMe for Windows](https://bitbucket.org/Alexander-Shukaev/vim-youcompleteme-for-windows), and then unzip it to %userprofile%/vimfiles/bundle/YouCompleteMe.
 
