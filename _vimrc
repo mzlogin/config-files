@@ -69,6 +69,9 @@ Plugin 'hynek/vim-python-pep8-indent'
 " table mode mostly for markdown
 Plugin 'dhruvasagar/vim-table-mode'
 
+" detect file encoding
+Plugin 'mbbill/fencview'
+
 if has("gui_macvim")
     Plugin 'Valloric/YouCompleteMe'
 elseif has("win32")
