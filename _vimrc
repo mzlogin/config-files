@@ -171,6 +171,10 @@ set cino+=:0,g0
 " autoclose complete window
 autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
 set completeopt=menuone,menu,longest
+
+" switch buffer
+noremap <C-Tab> :bn<CR>
+noremap <C-S-Tab> :bp<CR>
 " }}}
 
 " FileType specific settings {{{
