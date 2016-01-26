@@ -257,6 +257,7 @@ let g:tagbar_type_markdown = {
 " LeaderF
 nnoremap <silent> <leader>m :LeaderfMru<CR>
 let g:Lf_DefaultMode = 1
+let g:Lf_IndexTimeLimit = 1200
 
 " auto-pairs
 let g:AutoPairsShortcutToggle = '<leader>p'
