@@ -1,5 +1,4 @@
-config-files
-=======
+# config-files
 
 Contains config files below.
 
@@ -13,18 +12,22 @@ Contains config files below.
 
 The Quick Start below is just for self use, I don't promise it will work well in your environment.
 
-### Contents
+## Table of Contents
 
-* [Quick Start](#quick-start)
-    * [Mac OS X](#mac-os-x)
-    * [Windows](#windows)
-    * [Ubuntu](#ubuntu)
+* [Quick Start](#quick-start-1)
+	* [Mac OS X](#mac-os-x-1)
+		* [Vim](#vim)
+		* [Emacs](#emacs)
+	* [Windows](#windows-1)
+		* [Vim](#vim-1)
+		* [Emacs](#emacs-1)
+	* [Ubuntu](#ubuntu-1)
 
-### Quick Start
+## Quick Start
 
-#### Mac OS X
+### Mac OS X
 
-**Vim**
+#### Vim
 
 * Set up Vundle:
 
@@ -70,7 +73,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * Done!
 
-**Emacs**
+#### Emacs
 
 * install the newest version of GNU Emacs, global and sbcl
 
@@ -131,9 +134,9 @@ The Quick Start below is just for self use, I don't promise it will work well in
     ggtags <RETURN>
     ```
 
-#### Windows
+### Windows
 
-**Vim**
+#### Vim
 
 * Set up Vundle:
 
@@ -184,7 +187,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * Done!
 
-**Emacs**
+#### Emacs
 
 * get GNU Emacs in <http://www.gnu.org/software/emacs/>.
 
@@ -248,7 +251,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
     ggtags <RETURN>
     ```
 
-#### Ubuntu
+### Ubuntu
 
 * Set up Vundle:
 
