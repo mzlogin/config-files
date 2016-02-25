@@ -14,14 +14,14 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 ## Table of Contents
 
-* [Quick Start](#quick-start-1)
-	* [Mac OS X](#mac-os-x-1)
+* [Quick Start](#quick-start)
+	* [Mac OS X](#mac-os-x)
 		* [Vim](#vim)
 		* [Emacs](#emacs)
-	* [Windows](#windows-1)
+	* [Windows](#windows)
 		* [Vim](#vim-1)
 		* [Emacs](#emacs-1)
-	* [Ubuntu](#ubuntu-1)
+	* [Ubuntu](#ubuntu)
 
 ## Quick Start
 
