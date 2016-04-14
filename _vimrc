@@ -73,6 +73,9 @@ Plugin 'dhruvasagar/vim-table-mode'
 " detect file encoding
 Plugin 'mbbill/fencview'
 
+" Node.js
+Plugin 'myhere/vim-nodejs-complete'
+
 if has("gui_macvim")
     Plugin 'Valloric/YouCompleteMe'
 elseif has("win32")
