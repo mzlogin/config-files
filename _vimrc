@@ -50,6 +50,7 @@ Plugin 'Yggdroot/LeaderF'
 Plugin 'jiangmiao/auto-pairs'
 
 " web indent
+Plugin 'mzlogin/vim-js-indent'
 Plugin 'lukaszb/vim-web-indent'
 
 " Qml
@@ -307,4 +308,7 @@ let g:email_for_snippets = 'chumpma(at)gmail.com'
 
 " vim-markdown
 let g:markdown_fenced_languages = ['html', 'python', 'java', 'cpp', 'c']
+
+" for vim-js-indent debug
+"let g:js_indent_logging = 1
 " }}}
