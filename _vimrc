@@ -77,6 +77,9 @@ Plugin 'mbbill/fencview'
 " Node.js
 Plugin 'myhere/vim-nodejs-complete'
 
+" CoffeeScript
+Plugin 'kchmck/vim-coffee-script'
+
 if has("gui_macvim")
     Plugin 'Valloric/YouCompleteMe'
 elseif has("win32")
