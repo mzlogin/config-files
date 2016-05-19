@@ -156,6 +156,9 @@ set autochdir
 set nobackup
 set nowritebackup
 
+" fix windows path separator
+set shellslash
+
 " highlight
 syntax on
 
@@ -189,7 +192,6 @@ autocmd FileType html,php,javascript,xml,css setlocal shiftwidth=2
 autocmd FileType html,php,javascript,xml,css setlocal tabstop=2
 autocmd FileType smali setlocal cindent
 autocmd FileType vim setlocal foldmethod=marker
-autocmd FileType markdown setlocal shellslash
 " }}}
 
 " Common mappings {{{
