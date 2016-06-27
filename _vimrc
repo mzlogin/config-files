@@ -22,7 +22,7 @@ Plugin 'mzlogin/cscope_macros.vim'
 " markdown
 Plugin 'tpope/vim-markdown'
 Plugin 'mzlogin/vim-markdown-toc'
-Plugin 'mzlogin/vim-gfm-tab'
+Plugin 'mzlogin/vim-kramdown-tab'
 
 " C++
 Plugin 'vim-scripts/OmniCppComplete'
