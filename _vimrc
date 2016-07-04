@@ -45,7 +45,9 @@ Plugin 'vim-scripts/DrawIt'
 Plugin 'vim-scripts/jsbeautify'
 
 " fuzzy find files, buffers, mrus
-Plugin 'Yggdroot/LeaderF'
+if has('python')
+    Plugin 'Yggdroot/LeaderF'
+endif
 
 " brackets auto pair
 Plugin 'jiangmiao/auto-pairs'
@@ -81,10 +83,12 @@ Plugin 'myhere/vim-nodejs-complete'
 " CoffeeScript
 Plugin 'kchmck/vim-coffee-script'
 
-if has("gui_macvim")
-    Plugin 'Valloric/YouCompleteMe'
-elseif has("win32")
-    Plugin 'Valloric/YouCompleteMe', {'pinned': 1}
+if has('python')
+    if has("gui_macvim")
+        Plugin 'Valloric/YouCompleteMe'
+    elseif has("win32")
+        Plugin 'Valloric/YouCompleteMe', {'pinned': 1}
+    endif
 endif
 
 " All of your Plugins must be added before the following line
