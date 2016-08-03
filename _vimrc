@@ -261,12 +261,7 @@ autocmd FileType markdown let g:tagbar_sort = 0
 let g:tagbar_type_markdown = {
         \ 'ctagstype' : 'markdown',
         \ 'kinds' : [
-                \ 'h:Heading_L1',
-                \ 'i:Heading_L2',
-                \ 'j:Heading_L3',
-                \ 'k:Heading_L4',
-                \ 'l:Heading_L5',
-                \ 'm:Heading_L6',
+                \ 'h:headings',
         \ ]
 \ }
 
