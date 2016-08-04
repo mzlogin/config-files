@@ -257,12 +257,12 @@ let g:tagbar_type_smali = {
                 \ 'm:method',
         \ ]
 \ }
-autocmd FileType markdown let g:tagbar_sort = 0
 let g:tagbar_type_markdown = {
         \ 'ctagstype' : 'markdown',
         \ 'kinds' : [
                 \ 'h:headings',
-        \ ]
+        \ ],
+    \ 'sort' : 0
 \ }
 
 " LeaderF
