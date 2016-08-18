@@ -83,6 +83,9 @@ Plugin 'myhere/vim-nodejs-complete'
 " CoffeeScript
 Plugin 'kchmck/vim-coffee-script'
 
+" php
+Plugin 'StanAngeloff/php.vim'
+
 if has('python')
     if has("gui_macvim")
         Plugin 'Valloric/YouCompleteMe'
