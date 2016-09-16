@@ -218,6 +218,9 @@ if has("gui_macvim")
     inoremap ∆ <Down>
     inoremap ˚ <Up>
     inoremap ˙ <Left>
+    set noimdisable
+    set iminsert=2
+    set imsearch=1
 else
     " auto-complete
     inoremap <A-/> <C-x><C-o>
