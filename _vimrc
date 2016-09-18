@@ -124,9 +124,12 @@ if has("gui_running")
         set guifont=Monaco:h13
 "        set fullscreen
         set lines=60 columns=160
+        set noimdisable
+        set iminsert=2
     else
         set guifont=Ubuntu\ Mono\ 12
     endif
+    set imsearch=1
     set cursorline      " highlight current line
     set guioptions-=m   " menu
     set guioptions-=T   " toolbar
@@ -189,10 +192,6 @@ set cino+=:0,g0
 " autoclose complete window
 autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
 set completeopt=menuone,menu,longest
-
-" switch buffer
-noremap <C-Tab> :bn<CR>
-noremap <C-S-Tab> :bp<CR>
 " }}}
 
 " FileType specific settings {{{
@@ -204,6 +203,10 @@ autocmd FileType vim setlocal foldmethod=marker
 " }}}
 
 " Common mappings {{{
+" switch buffer
+noremap <C-Tab> :bn<CR>
+noremap <C-S-Tab> :bp<CR>
+
 " split window switch key map
 noremap <C-l> <C-w>l
 noremap <C-j> <C-w>j
@@ -218,9 +221,6 @@ if has("gui_macvim")
     inoremap ∆ <Down>
     inoremap ˚ <Up>
     inoremap ˙ <Left>
-    set noimdisable
-    set iminsert=2
-    set imsearch=1
 else
     " auto-complete
     inoremap <A-/> <C-x><C-o>
