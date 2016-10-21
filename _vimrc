@@ -146,14 +146,14 @@ set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936,big5,latin-1   " ucs-bom, compatible notepad UTF-8 with first three bytes is EFBBBF
 
 " menu and bottom messy code
-source $VIMRUNTIME/delmenu.vim   
-source $VIMRUNTIME/menu.vim  
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
 if has("win32")
-    language messages zh_US.utf-8 
+    language messages zh_US.utf-8
 endif
 
 " color scheme
-colorscheme desert 
+colorscheme desert
 
 " Ctags
 set tags=tags
@@ -189,8 +189,11 @@ set foldlevelstart=99
 " no indent for case, default, public, private and protected
 set cino+=:0,g0
 
+" remove trailing whitespaces on save
+autocmd BufWritePre * :%s/ \+$//e
+
 " autoclose complete window
-autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif 
+autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest
 " }}}
 
@@ -245,8 +248,8 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 " OmniCppComplete
 nnoremap <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 nnoremap <C-F11> :!cscope -Rb <CR>
-let OmniCpp_ShowPrototypeInAbbr = 1 
-let OmniCpp_MayCompleteScope = 1 
+let OmniCpp_ShowPrototypeInAbbr = 1
+let OmniCpp_MayCompleteScope = 1
 
 " javacomplete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
