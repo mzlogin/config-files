@@ -284,6 +284,7 @@ let g:AutoPairsShortcutToggle = '<leader>p'
 let g:AutoPairsShortcutJump = ''
 let g:AutoPairsMapSpace = 0
 let g:AutoPairsMultilineClose = 0
+let g:AutoPairsMapBS = 0
 autocmd FileType c,cpp let b:AutoPairs = {'[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
 autocmd FileType smali let b:AutoPairs = {'(':')', '{':'}',"'":"'",'"':'"', '`':'`'}
 if has("gui_macvim")
