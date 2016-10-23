@@ -14,6 +14,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 ## Table of Contents
 
+<!-- vim-markdown-toc GFM -->
 * [Quick Start](#quick-start)
 	* [Mac OS X](#mac-os-x)
 		* [Vim](#vim)
@@ -22,6 +23,8 @@ The Quick Start below is just for self use, I don't promise it will work well in
 		* [Vim](#vim-1)
 		* [Emacs](#emacs-1)
 	* [Ubuntu](#ubuntu)
+
+<!-- vim-markdown-toc -->
 
 ## Quick Start
 
@@ -32,7 +35,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 * Set up Vundle:
 
     ```
-    git clone https://github.com/gmarik/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
     ```
 
 * install cscope
@@ -141,7 +144,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 * Set up Vundle:
 
     ```
-    git clone https://github.com/gmarik/Vundle.vim.git %userprofile%/vimfiles/bundle/Vundle.vim
+    git clone https://github.com/VundleVim/Vundle.vim.git %userprofile%/vimfiles/bundle/Vundle.vim
     ```
 
 * place ctags.exe
@@ -209,7 +212,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 * copy c++ headers into ~/.emacs.d/cpp-headers
 
 * use elpa in Emacs to install plugins below:
-    
+
     * company
 
     * ggtags
@@ -256,7 +259,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 * Set up Vundle:
 
     ```
-    git clone https://github.com/gmarik/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
     ```
 
 * install ctags

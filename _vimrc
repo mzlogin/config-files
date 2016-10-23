@@ -8,7 +8,7 @@ let path='~/vimfiles/bundle'
 call vundle#begin(path)
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " file explorer
 Plugin 'scrooloose/nerdtree'
@@ -20,7 +20,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'mzlogin/cscope_macros.vim'
 
 " markdown
-Plugin 'tpope/vim-markdown'
 Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'mzlogin/vim-kramdown-tab'
 
@@ -78,7 +77,7 @@ Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'mbbill/fencview'
 
 " Node.js
-Plugin 'myhere/vim-nodejs-complete'
+"Plugin 'myhere/vim-nodejs-complete'
 
 " CoffeeScript
 Plugin 'kchmck/vim-coffee-script'
@@ -86,13 +85,8 @@ Plugin 'kchmck/vim-coffee-script'
 " php
 Plugin 'StanAngeloff/php.vim'
 
-if has('python')
-    if has("gui_macvim")
-        Plugin 'Valloric/YouCompleteMe'
-    elseif has("win32")
-        Plugin 'Valloric/YouCompleteMe', {'pinned': 1}
-    endif
-endif
+" God's presence, but build it is to death.
+Plugin 'Valloric/YouCompleteMe', {'pinned': 1}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
