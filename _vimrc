@@ -317,6 +317,7 @@ endif
 " vim-table-mode
 let g:table_mode_corner = '|'
 let g:table_mode_delimiter = ' '
+let g:table_mode_verbose = 0
 autocmd FileType markdown TableModeEnable
 
 " code_complete
