@@ -76,9 +76,6 @@ Plugin 'dhruvasagar/vim-table-mode'
 " detect file encoding
 Plugin 'mbbill/fencview'
 
-" Node.js
-"Plugin 'myhere/vim-nodejs-complete'
-
 " CoffeeScript
 Plugin 'kchmck/vim-coffee-script'
 
@@ -183,8 +180,8 @@ set foldlevelstart=99
 " no indent for case, default, public, private and protected
 set cino+=:0,g0
 
-" remove trailing whitespaces on save
-autocmd BufWritePre * :%s/ \+$//e
+" trailing whitespaces
+nnoremap <leader><space> :%s/ \+$//e<CR>
 
 " autoclose complete window
 autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
@@ -201,14 +198,14 @@ autocmd FileType vim setlocal foldmethod=marker
 
 " Common mappings {{{
 " switch buffer
-noremap <C-Tab> :bn<CR>
-noremap <C-S-Tab> :bp<CR>
+nnoremap <C-Tab> :bn<CR>
+nnoremap <C-S-Tab> :bp<CR>
 
 " split window switch key map
-noremap <C-l> <C-w>l
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
 
 if has("gui_macvim")
     " auto-complete
