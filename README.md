@@ -71,7 +71,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
     brew install cmake
     cd ~/vimfiles/bundle/YouComplete
     git submodule update --init --recursive
-    ./install.sh --clang-completer --system-libclang
+    ./install.sh --clang-completer --tern-completer --system-libclang
     ```
 
 * Done!
@@ -181,12 +181,19 @@ The Quick Start below is just for self use, I don't promise it will work well in
     (You can download iconv.dll I am used [here](http://pan.baidu.com/s/1pJGOpCJ).)
 
 * Config YouCompleteMe (*optional*)
-    * Install LLVM/Clang for windows and add libclang.dll path to PATH environment variable.
-    * Download [Vim YouCompleteMe for Windows](https://bitbucket.org/Alexander-Shukaev/vim-youcompleteme-for-windows), and then unzip it to %userprofile%/vimfiles/bundle/YouCompleteMe.
 
-    **Notice:** Your Vim/Clang/YCM should be all x86 or all x64, keep them consistent.
+    YouCompleteMe slow down Vim startup time obviously in Windows, so I use `:packadd YouCompleteMe` to lazy load.
 
-    **You may meet some pitfalls in this step, keep easy and see Overview and Issues in the above link.**
+    Installation references <https://github.com/Valloric/YouCompleteMe#windows>, the only difference is don't install YouCompleteMe with Vundle, just clone the source to `%userprofile%\vimfiles\pack\ycm\opt`, and finish the remain steps in offical doc.
+
+    My install command is `python install.py --clang-completer --tern-completer --msvc=12`.
+
+    A problem I have met should note here is `CMAKE_C_COMPILER and CMAKE_CXX_COMPILER not found`, I fixed it with add the following two lines before `project( YouCompleteMe )` in `third_party/ycmd/cpp/CMakeFile.txt`:
+
+    ```
+    SET(CMAKE_C_COMPILER "D:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin/cl.exe")
+    SET(CMAKE_CXX_COMPILER "D:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin/cl.exe")
+    ```
 
 * Done!
 

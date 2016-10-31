@@ -83,7 +83,12 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'StanAngeloff/php.vim'
 
 " God's presence, but build it is to death.
-Plugin 'Valloric/YouCompleteMe', {'pinned': 1}
+" In Windows, config ycm manually and use :packadd to lazy load
+if has('python')
+    if has('gui_macvim')
+        Plugin 'Valloric/YouCompleteMe', {'pinned': 1}
+    endif
+endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
