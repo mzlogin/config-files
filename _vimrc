@@ -295,6 +295,7 @@ autocmd FileType html,css EmmetInstall
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>r :YcmCompleter GoToReferences<CR>
 
 " minibufexpl.vim
 nnoremap <leader>e :MBEToggle<CR>
