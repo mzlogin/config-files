@@ -52,7 +52,7 @@ endif
 Plugin 'jiangmiao/auto-pairs'
 
 " web indent
-Plugin 'mzlogin/vim-js-indent'
+Plugin 'jason0x43/vim-js-indent'
 Plugin 'lukaszb/vim-web-indent'
 
 " Qml
