@@ -8,3 +8,4 @@
 !/.emacs.d/site-lisp
 !.ctags
 !.ycm_extra_conf.py
+!snippets.vim
