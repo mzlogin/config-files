@@ -26,7 +26,7 @@ Plugin 'mzlogin/vim-kramdown-tab'
 " C++
 Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'vim-scripts/a.vim'
-Plugin 'mzlogin/code_complete'
+Plugin 'mbbill/code_complete'
 
 " Java
 Plugin 'vim-scripts/javacomplete'
@@ -318,6 +318,7 @@ let g:table_mode_verbose = 0
 autocmd FileType markdown TableModeEnable
 
 " code_complete
+let g:user_defined_snippets = '~/snippets.vim'
 let g:author_for_snippets = 'Zhuang Ma'
 let g:email_for_snippets = 'chumpma(at)gmail.com'
 
