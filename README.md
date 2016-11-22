@@ -16,13 +16,13 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 <!-- vim-markdown-toc GFM -->
 * [Quick Start](#quick-start)
-	* [Mac OS X](#mac-os-x)
-		* [Vim](#vim)
-		* [Emacs](#emacs)
-	* [Windows](#windows)
-		* [Vim](#vim-1)
-		* [Emacs](#emacs-1)
-	* [Ubuntu](#ubuntu)
+    * [Mac OS X](#mac-os-x)
+        * [Vim](#vim)
+        * [Emacs](#emacs)
+    * [Windows](#windows)
+        * [Vim](#vim-1)
+        * [Emacs](#emacs-1)
+    * [Ubuntu](#ubuntu)
 
 <!-- vim-markdown-toc -->
 
@@ -38,17 +38,19 @@ The Quick Start below is just for self use, I don't promise it will work well in
     git clone https://github.com/VundleVim/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
     ```
 
-* install cscope
+* install cscope and universal-ctags
 
-	If you want to view code, you may need cscope support, so install it.
+    If you want to view code, you may need cscope and ctags support, so install it.
 
     ```
     brew install cscope
+    brew tap universal-ctags/universal-ctags
+    brew install --HEAD universal-ctags
     ```
 
 * generate tags files (*optional*)
 
-	For better c++ coding experience, generate your crttags and win32tags into ~/tags-files dir.
+    For better c++ coding experience, generate your crttags and win32tags into ~/tags-files dir.
 
 * pull config files:
 
@@ -61,7 +63,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * Install plugins
 
-	Start vim, and exec `:PluginInstall`
+    Start vim, and exec `:PluginInstall`
 
 * Build YouCompleteMe plugin
 
@@ -100,35 +102,35 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
     * ggtags
 
-	* helm-gtags
+    * helm-gtags
 
     * markdown-mode
 
-	* projectile
+    * projectile
 
-	* sr-speedbar
+    * sr-speedbar
 
-	* smex
+    * smex
 
-	* evil
+    * evil
 
-	* jedi
-		* pip install virtualenv
-	    * M-x package-install <RETURN> jedi <RETURN>
-		* M-x package-install <RETURN> exec-path-from-shell <RETURN>
-		* restart emacs
-		* M-x exec-path-from-shell-initialize
-		* M-x jedi:install-server
+    * jedi
+        * pip install virtualenv
+        * M-x package-install <RETURN> jedi <RETURN>
+        * M-x package-install <RETURN> exec-path-from-shell <RETURN>
+        * restart emacs
+        * M-x exec-path-from-shell-initialize
+        * M-x jedi:install-server
 
-	* evil-nerd-commenter
+    * evil-nerd-commenter
 
-	* function-args
+    * function-args
 
-	* slime
+    * slime
 
-	* slime-company
+    * slime-company
 
-	* smooth-scrolling
+    * smooth-scrolling
 
     For example to install ggtags:
 
@@ -147,19 +149,21 @@ The Quick Start below is just for self use, I don't promise it will work well in
     git clone https://github.com/VundleVim/Vundle.vim.git %userprofile%/vimfiles/bundle/Vundle.vim
     ```
 
-* place ctags.exe
+* place ctags
 
-	The plugin taglist required **Exuberant Ctags**, so download it, and put it into YourVimInstallPath/vim74/ directory.
+    The plugin tagbar required universal-ctags, so download it, and put it into YourVimInstallPath/vim80/ directory.
 
-    (You can download ctags and cscope I am used [here](http://pan.baidu.com/s/1c06ucTi).)
+    Download link: <https://github.com/universal-ctags/ctags>
 
-* place cscope.exe (*optional*)
+* place cscope (*optional*)
 
-	If you want to view code, you may need cscope support, put it into YourVimInstallPath/vim74/ directory.(It may depend on regex2.dll and curses2.dll)
+    If you want to view code, you may need cscope support, put it into YourVimInstallPath/vim80/ directory.
+
+    Download link: <https://sourceforge.net/projects/mslk/files/Cscope/>
 
 * generate tags files (*optional*)
 
-	For better c++ coding experience, generate your crttags and win32tags into ~/tags-files dir.
+    For better c++ coding experience, generate your crttags and win32tags into ~/tags-files dir.
 
 * pull config files:
 
@@ -172,7 +176,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * Install plugins
 
-	Start vim, and exec `:PluginInstall`
+    Start vim, and exec `:PluginInstall`
 
 * place iconv.dll
 
@@ -203,14 +207,14 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * add "Edit with Emacs" to context menu with .reg file (replace exe file path to yours first):
 
-	```
-	Windows Registry Editor Version 5.00
+    ```
+    Windows Registry Editor Version 5.00
 
-	[HKEY_CLASSES_ROOT\*\shell\Edit with Emacs]
+    [HKEY_CLASSES_ROOT\*\shell\Edit with Emacs]
 
-	[HKEY_CLASSES_ROOT\*\shell\Edit with Emacs\command]
-	@="\"D:\\emacs\\bin\\emacsclientw.exe\" -a \"D:\\emacs\\bin\\runemacs.exe\" \"%1\""
-	```
+    [HKEY_CLASSES_ROOT\*\shell\Edit with Emacs\command]
+    @="\"D:\\emacs\\bin\\emacsclientw.exe\" -a \"D:\\emacs\\bin\\runemacs.exe\" \"%1\""
+    ```
 
 * download GNU Global from <http://www.gnu.org/software/global/>, and copy files to Emacs directory.
 
@@ -224,35 +228,35 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
     * ggtags
 
-	* helm-gtags
+    * helm-gtags
 
     * markdown-mode
 
-	* projectile
+    * projectile
 
-	* sr-speedbar
+    * sr-speedbar
 
-	* smex
+    * smex
 
-	* evil
+    * evil
 
-	* jedi
-		* pip install virtualenv
-	    * M-x package-install <RETURN> jedi <RETURN>
-		* M-x package-install <RETURN> exec-path-from-shell <RETURN>
-		* restart emacs
-		* M-x exec-path-from-shell-initialize
-		* M-x jedi:install-server
+    * jedi
+        * pip install virtualenv
+        * M-x package-install <RETURN> jedi <RETURN>
+        * M-x package-install <RETURN> exec-path-from-shell <RETURN>
+        * restart emacs
+        * M-x exec-path-from-shell-initialize
+        * M-x jedi:install-server
 
-	* evil-nerd-commenter
+    * evil-nerd-commenter
 
-	* function-args
+    * function-args
 
-	* slime
+    * slime
 
-	* slime-company
+    * slime-company
 
-	* smooth-scrolling
+    * smooth-scrolling
 
     For example to install ggtags:
 
@@ -271,15 +275,17 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * install ctags
 
-	The plugin taglist required ctags, so install it.
+    The plugin taglist required ctags, so install it.
 
     ```
     sudo apt-get install exuberant-ctags
     ```
 
+    or ref <https://github.com/universal-ctags/ctags> to use universal-ctags.
+
 * install cscope
 
-	If you want to view code, you may need cscope support, so install it.
+    If you want to view code, you may need cscope support, so install it.
 
     ```
     sudo apt-get install cscope
@@ -287,7 +293,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * generate tags files (*optional*)
 
-	For better c++ coding experience, generate your crttags and win32tags into ~/tags-files dir.
+    For better c++ coding experience, generate your crttags and win32tags into ~/tags-files dir.
 
 * pull config files:
 
@@ -300,6 +306,6 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * Install plugins
 
-	Start vim, and exec `:PluginInstall`
+    Start vim, and exec `:PluginInstall`
 
 * Done!
