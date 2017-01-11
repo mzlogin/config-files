@@ -238,7 +238,7 @@ endif
 " Plugin settings {{{
 " nerdtree
 let NERDTreeWinPos=1
-let g:NERDTreeIgnore = ['\~$', '\.pyc']
+let g:NERDTreeIgnore = ['\~$', '\.pyc$', '\.class$']
 nnoremap <leader>n :NERDTreeToggle<CR>
 
 " OmniCppComplete
