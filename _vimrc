@@ -191,6 +191,11 @@ nnoremap <leader><space> :%s/ \+$//e<CR>
 " autoclose complete window
 autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest
+
+" jump to the last position when reopening a file
+if has("autocmd")
+    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
 " }}}
 
 " FileType specific settings {{{
