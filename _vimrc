@@ -199,10 +199,10 @@ endif
 " }}}
 
 " FileType specific settings {{{
-"autocmd FileType html,php,javascript,xml,css setlocal shiftwidth=2
-"autocmd FileType html,php,javascript,xml,css setlocal tabstop=2
+"autocmd FileType html,php,javascript,xml,css setlocal shiftwidth=2 tabstop=2
+autocmd FileType proto setlocal shiftwidth=2 tabstop=2
 autocmd FileType smali setlocal cindent
-autocmd FileType conf,markdown setlocal smartindent
+autocmd FileType conf,markdown,proto setlocal smartindent
 autocmd FileType vim setlocal foldmethod=marker
 " }}}
 
