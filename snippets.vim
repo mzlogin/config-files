@@ -8,6 +8,13 @@
 " ...
 "
 " ---------------------------------------------
+" common templates
+let g:template['_'] = {}
+let g:template['_']['date'] = "\<c-r>=strftime(\"%Y-%m-%d\")\<cr>"
+let g:template['_']['time'] = "\<c-r>=strftime(\"%H:%M:%S\")\<cr>"
+let g:template['_']['datetime'] = "\<c-r>=strftime(\"%Y-%m-%d %H:%M:%S\")\<cr>"
+
+" ---------------------------------------------
 " C templates
 let g:template['c'] = {}
 let g:template['c']['cc'] = "/*  */\<left>\<left>\<left>"
@@ -41,8 +48,6 @@ let g:template['python']['header'] = "#-*- encoding: utf-8 -*-\<cr>"
 let g:template['python']['ifmain'] = "def main():\<cr>pass\<cr>\<cr>if __name__ == '__main__':\<cr>main()"
 
 " ---------------------------------------------
-" common templates
-let g:template['_'] = {}
-let g:template['_']['date'] = "\<c-r>=strftime(\"%Y-%m-%d\")\<cr>"
-let g:template['_']['time'] = "\<c-r>=strftime(\"%H:%M:%S\")\<cr>"
-let g:template['_']['datetime'] = "\<c-r>=strftime(\"%Y-%m-%d %H:%M:%S\")\<cr>"
+" Java templates
+let g:template['java'] = {}
+let g:template['java']['psvm'] = "public static void main(String[] args) {\<cr>".g:rs."...".g:re."\<cr>}"
