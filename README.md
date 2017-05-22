@@ -199,6 +199,8 @@ The Quick Start below is just for self use, I don't promise it will work well in
     SET(CMAKE_CXX_COMPILER "D:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin/cl.exe")
     ```
 
+    Error `no module named concurrent.futures` may occured when `:packadd YouCompleteMe` with python 2.7.x, `pip install futures` can fix it.
+
 * Done!
 
 #### Emacs
