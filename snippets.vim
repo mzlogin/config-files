@@ -51,3 +51,4 @@ let g:template['python']['ifmain'] = "def main():\<cr>pass\<cr>\<cr>if __name__ 
 " Java templates
 let g:template['java'] = {}
 let g:template['java']['psvm'] = "public static void main(String[] args) {\<cr>".g:rs."...".g:re."\<cr>}"
+let g:template['java']['sop'] = 'System.out.println('
