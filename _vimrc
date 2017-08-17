@@ -90,6 +90,9 @@ if has('python')
     endif
 endif
 
+" devdocs
+Plugin 'rhysd/devdocs.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -330,6 +333,12 @@ let g:email_for_snippets = 'chumpma(at)gmail.com'
 
 " vim-markdown
 let g:markdown_fenced_languages = ['html', 'python', 'java', 'cpp', 'c', 'xml']
+
+" devdocs.vim
+augroup plugin-devdocs
+  autocmd!
+  autocmd FileType c,cpp,python,java,javascript nmap <buffer>K <Plug>(devdocs-under-cursor)
+augroup END
 
 " for vim-js-indent debug
 "let g:js_indent_logging = 1
