@@ -93,6 +93,9 @@ endif
 " devdocs
 Plugin 'rhysd/devdocs.vim'
 
+" json pretty prints
+Plugin 'tpope/vim-jdaddy'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -339,6 +342,9 @@ augroup plugin-devdocs
   autocmd!
   autocmd FileType c,cpp,python,java,javascript nmap <buffer>K <Plug>(devdocs-under-cursor)
 augroup END
+
+" vim-jdaddy
+nmap <leader>j gqaj
 
 " for vim-js-indent debug
 "let g:js_indent_logging = 1
