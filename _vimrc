@@ -335,7 +335,7 @@ let g:author_for_snippets = 'Zhuang Ma'
 let g:email_for_snippets = 'chumpma(at)gmail.com'
 
 " vim-markdown
-let g:markdown_fenced_languages = ['html', 'python', 'java', 'cpp', 'c', 'xml']
+let g:markdown_fenced_languages = ['html', 'python', 'java', 'cpp', 'c', 'xml', 'sql', 'json']
 
 " devdocs.vim
 augroup plugin-devdocs
