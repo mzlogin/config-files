@@ -244,6 +244,9 @@ else
     inoremap <A-p> <C-p>
 endif
 
+" open/create file under cursor
+nnoremap <leader>gf :e <cfile><cr>
+
 " }}}
 
 " Plugin settings {{{
