@@ -20,6 +20,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'mzlogin/cscope_macros.vim'
 
 " markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'mzlogin/vim-kramdown-tab'
 
