@@ -98,6 +98,9 @@ Plugin 'rhysd/devdocs.vim'
 " json pretty prints
 Plugin 'tpope/vim-jdaddy'
 
+" compile and run
+Plugin 'xuhdev/SingleCompile'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -212,6 +215,8 @@ autocmd FileType proto setlocal shiftwidth=2 tabstop=2
 autocmd FileType smali setlocal cindent
 autocmd FileType conf,markdown,proto setlocal smartindent
 autocmd FileType vim setlocal foldmethod=marker
+autocmd BufRead,BufNewFile *.{log} set filetype=log
+autocmd FileType log set autoread
 " }}}
 
 " Common mappings {{{
@@ -356,4 +361,8 @@ nmap <leader>j gqaj
 
 " for vim-js-indent debug
 "let g:js_indent_logging = 1
+
+" SingleCompile
+nmap <F9> :SCCompile<cr>
+nmap <F10> :SCCompileRun<cr>
 " }}}
