@@ -217,6 +217,8 @@ autocmd FileType conf,markdown,proto setlocal smartindent
 autocmd FileType vim setlocal foldmethod=marker
 autocmd BufRead,BufNewFile *.{log} set filetype=log
 autocmd FileType log set autoread
+autocmd FileType log nnoremap <silent> <F5> :checktime<CR>
+autocmd FocusGained,FocusLost,CursorHold,CursorHoldI,CursorMoved,CursorMovedI *.{log} checktime
 " }}}
 
 " Common mappings {{{
