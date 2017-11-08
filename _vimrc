@@ -20,8 +20,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'mzlogin/cscope_macros.vim'
 
 " markdown
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'mzlogin/vim-kramdown-tab'
 
@@ -348,9 +346,6 @@ let g:email_for_snippets = 'chumpma(at)gmail.com'
 
 " vim-markdown
 let g:markdown_fenced_languages = ['html', 'python', 'java', 'cpp', 'c', 'xml', 'sql', 'json']
-
-" plasticboy/vim-markdown
-let g:vim_markdown_toc_autofit = 1
 
 " devdocs.vim
 augroup plugin-devdocs
