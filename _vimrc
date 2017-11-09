@@ -82,6 +82,9 @@ Plugin 'kchmck/vim-coffee-script'
 " php
 Plugin 'StanAngeloff/php.vim'
 
+" vue
+Plugin 'posva/vim-vue'
+
 " God's presence, but build it is to death.
 " In Windows, config ycm manually and use :packadd to lazy load
 if has('python')
