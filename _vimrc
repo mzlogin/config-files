@@ -41,7 +41,7 @@ Plugin 'fholgado/minibufexpl.vim'
 Plugin 'vim-scripts/DrawIt'
 
 " js formatter
-Plugin 'vim-scripts/jsbeautify'
+Plugin 'pangloss/vim-javascript'
 
 " fuzzy find files, buffers, mrus
 if has('python')
@@ -211,7 +211,7 @@ endif
 " }}}
 
 " FileType specific settings {{{
-"autocmd FileType html,php,javascript,xml,css setlocal shiftwidth=2 tabstop=2
+autocmd FileType html,javascript,css,vue setlocal shiftwidth=2 tabstop=2
 autocmd FileType proto setlocal shiftwidth=2 tabstop=2
 autocmd FileType smali setlocal cindent
 autocmd FileType conf,markdown,proto setlocal smartindent
