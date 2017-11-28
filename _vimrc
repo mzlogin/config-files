@@ -211,10 +211,11 @@ endif
 " }}}
 
 " FileType specific settings {{{
+autocmd BufRead,BufNewFile *.{mmd} set filetype=mermaid
 autocmd FileType html,javascript,css,vue setlocal shiftwidth=2 tabstop=2
 autocmd FileType proto setlocal shiftwidth=2 tabstop=2
 autocmd FileType smali setlocal cindent
-autocmd FileType conf,markdown,proto setlocal smartindent
+autocmd FileType conf,markdown,proto,mermaid setlocal smartindent
 autocmd FileType vim setlocal foldmethod=marker
 autocmd BufRead,BufNewFile *.{log} set filetype=log
 autocmd FileType log set autoread
@@ -365,4 +366,7 @@ nmap <leader>j gqaj
 " SingleCompile
 nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
+call SingleCompile#SetCompilerTemplate('mermaid', 'mmdc', 'mermaid.cli',
+         \'mmdc', '-i $(FILE_NAME)$ -o $(FILE_TITLE)$.svg', '$(FILE_TITLE)$.svg')
+call SingleCompile#SetOutfile('mermaid', 'mmdc', '$(FILE_TITLE)$.svg')
 " }}}
