@@ -212,7 +212,7 @@ endif
 
 " FileType specific settings {{{
 autocmd BufRead,BufNewFile *.{mmd} set filetype=mermaid
-autocmd FileType html,javascript,css,vue setlocal shiftwidth=2 tabstop=2
+autocmd FileType html,javascript,css,less,vue setlocal shiftwidth=2 tabstop=2
 autocmd FileType proto setlocal shiftwidth=2 tabstop=2
 autocmd FileType smali setlocal cindent
 autocmd FileType conf,markdown,proto,mermaid setlocal smartindent
