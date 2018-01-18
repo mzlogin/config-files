@@ -366,7 +366,7 @@ nmap <leader>j gqaj
 " SingleCompile
 nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
-call SingleCompile#SetCompilerTemplate('mermaid', 'mmdc', 'mermaid.cli',
-         \'mmdc', '-i $(FILE_NAME)$ -o $(FILE_TITLE)$.svg', '$(FILE_TITLE)$.svg')
-call SingleCompile#SetOutfile('mermaid', 'mmdc', '$(FILE_TITLE)$.svg')
+autocmd FileType mermaid call SingleCompile#SetCompilerTemplate('mermaid', 'mmdc', 'mermaid.cli',
+            \'mmdc', '-i $(FILE_NAME)$ -o $(FILE_TITLE)$.svg', '$(FILE_TITLE)$.svg')
+autocmd FileType mermaid call SingleCompile#SetOutfile('mermaid', 'mmdc', '$(FILE_TITLE)$.svg')
 " }}}
