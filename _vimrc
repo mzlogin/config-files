@@ -369,4 +369,5 @@ nmap <F10> :SCCompileRun<cr>
 autocmd FileType mermaid call SingleCompile#SetCompilerTemplate('mermaid', 'mmdc', 'mermaid.cli',
             \'mmdc', '-i $(FILE_NAME)$ -o $(FILE_TITLE)$.svg', '$(FILE_TITLE)$.svg')
 autocmd FileType mermaid call SingleCompile#SetOutfile('mermaid', 'mmdc', '$(FILE_TITLE)$.svg')
+autocmd FileType python call SingleCompile#ChooseCompiler('python', 'python3')
 " }}}
