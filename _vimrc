@@ -212,6 +212,7 @@ endif
 
 " FileType specific settings {{{
 autocmd BufRead,BufNewFile *.{mmd} set filetype=mermaid
+autocmd BufRead,BufNewFile *.{uixml} set filetype=html
 autocmd FileType html,javascript,css,less,vue setlocal shiftwidth=2 tabstop=2
 autocmd FileType proto setlocal shiftwidth=2 tabstop=2
 autocmd FileType smali setlocal cindent
