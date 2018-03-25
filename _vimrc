@@ -44,7 +44,7 @@ Plugin 'vim-scripts/DrawIt'
 Plugin 'pangloss/vim-javascript'
 
 " fuzzy find files, buffers, mrus
-if has('python')
+if has('python') || has('python3')
     Plugin 'Yggdroot/LeaderF'
 endif
 
