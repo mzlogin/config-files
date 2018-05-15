@@ -208,6 +208,9 @@ set completeopt=menuone,menu,longest
 if has("autocmd")
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
+
+" list search results in location window
+nnoremap <leader>lv :lv /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
 " }}}
 
 " FileType specific settings {{{
