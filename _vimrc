@@ -303,6 +303,10 @@ let g:tagbar_type_markdown = {
 nnoremap <silent> <leader>m :LeaderfMru<CR>
 let g:Lf_DefaultMode = 'FullPath'
 let g:Lf_IndexTimeLimit = 1200
+let g:Lf_MruWildIgnore = {
+            \ 'dir': ['.git'],
+            \ 'file': []
+            \ }
 
 " auto-pairs
 let g:AutoPairsShortcutToggle = '<leader>p'
