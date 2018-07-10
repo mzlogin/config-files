@@ -102,6 +102,9 @@ Plugin 'tpope/vim-jdaddy'
 " compile and run
 Plugin 'xuhdev/SingleCompile'
 
+" miniprogram
+Plugin 'chemzqm/wxapp.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -216,7 +219,7 @@ nnoremap <leader>lv :lv /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
 " FileType specific settings {{{
 autocmd BufRead,BufNewFile *.{mmd} set filetype=mermaid
 autocmd BufRead,BufNewFile *.{uixml} set filetype=html
-autocmd FileType html,javascript,css,less,vue setlocal shiftwidth=2 tabstop=2
+autocmd FileType html,javascript,css,less,vue,wxml,wxss setlocal shiftwidth=2 tabstop=2
 autocmd FileType proto setlocal shiftwidth=2 tabstop=2
 autocmd FileType smali setlocal cindent
 autocmd FileType conf,markdown,proto,mermaid setlocal smartindent
@@ -237,6 +240,10 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
+
+" adjust split window size
+nnoremap <leader>w= <C-w><C-=>
+nnoremap <leader>wm <C-w>\|<C-w>_
 
 if has("gui_macvim")
     " auto-complete
