@@ -23,6 +23,8 @@ Plugin 'mzlogin/cscope_macros.vim'
 Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'mzlogin/vim-kramdown-tab'
 
+Plugin 'iamcco/markdown-preview.vim'
+
 " C++
 Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'vim-scripts/a.vim'
