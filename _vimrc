@@ -387,4 +387,6 @@ autocmd FileType mermaid call SingleCompile#SetCompilerTemplate('mermaid', 'mmdc
             \'mmdc', '-i $(FILE_NAME)$ -o $(FILE_TITLE)$.svg', '$(FILE_TITLE)$.svg')
 autocmd FileType mermaid call SingleCompile#SetOutfile('mermaid', 'mmdc', '$(FILE_TITLE)$.svg')
 autocmd FileType python call SingleCompile#ChooseCompiler('python', 'python3')
+autocmd FileType java call SingleCompile#SetCompilerTemplate('java', 'sunjdk', 'Sun Java Development Kit',
+            \'javac', '-encoding utf-8 $(FILE_NAME)$', 'java $(FILE_TITLE)$')
 " }}}
