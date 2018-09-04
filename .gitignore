@@ -7,5 +7,6 @@
 .emacs.d/*
 !/.emacs.d/site-lisp
 !.ctags
+!/.ctags.d/
 !.ycm_extra_conf.py
 !snippets.vim
