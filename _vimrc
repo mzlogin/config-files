@@ -137,8 +137,8 @@ if has("gui_running")
         set guifont=Monaco:h13
 "        set fullscreen
         set lines=60 columns=160
-        set noimdisable
-        set iminsert=2
+"        set noimdisable
+"        set iminsert=2
     else
         set guifont=Ubuntu\ Mono\ 12
     endif
