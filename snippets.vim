@@ -52,3 +52,9 @@ let g:template['python']['ifmain'] = "def main():\<cr>pass\<cr>\<cr>if __name__ 
 let g:template['java'] = {}
 let g:template['java']['psvm'] = "public static void main(String[] args) {\<cr>".g:rs."...".g:re."\<cr>}"
 let g:template['java']['sop'] = 'System.out.println('
+
+" ---------------------------------------------
+" git commit msg
+let g:template['gitcommit'] = {}
+let g:template['gitcommit']['cs'] = "--user=".g:author_for_snippets." --story="
+let g:template['gitcommit']['cb'] = "--user=".g:author_for_snippets." --bug="
