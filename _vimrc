@@ -363,6 +363,7 @@ autocmd FileType markdown TableModeEnable
 " code_complete
 let g:user_defined_snippets = '~/snippets.vim'
 let g:author_for_snippets = 'Zhuang Ma'
+let g:user_for_snippets = '马壮'
 let g:email_for_snippets = 'chumpma(at)gmail.com'
 
 " vim-markdown
