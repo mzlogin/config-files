@@ -15,6 +15,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 ## Table of Contents
 
 <!-- vim-markdown-toc GFM -->
+
 * [Quick Start](#quick-start)
     * [Mac OS X](#mac-os-x)
         * [Vim](#vim)
@@ -38,7 +39,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
     git clone https://github.com/VundleVim/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
     ```
 
-* install cscope and universal-ctags
+* install cscope, universal-ctags and ripgrep
 
     If you want to view code, you may need cscope and ctags support, so install it.
 
@@ -46,6 +47,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
     brew install cscope
     brew tap universal-ctags/universal-ctags
     brew install --HEAD universal-ctags
+    brew install ripgrep
     ```
 
 * generate tags files (*optional*)
@@ -154,6 +156,10 @@ The Quick Start below is just for self use, I don't promise it will work well in
     The plugin tagbar required universal-ctags, so download it, and put it into YourVimInstallPath/vim80/ directory.
 
     Download link: <https://github.com/universal-ctags/ctags>
+
+* install ripgrep
+
+    Download link: https://github.com/BurntSushi/ripgrep
 
 * place cscope (*optional*)
 

@@ -107,6 +107,9 @@ Plugin 'xuhdev/SingleCompile'
 " miniprogram
 Plugin 'chemzqm/wxapp.vim'
 
+" search
+Plugin 'mileszs/ack.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -394,4 +397,12 @@ autocmd FileType java call SingleCompile#SetCompilerTemplate('java', 'sunjdk', '
 " markdown-preview
 autocmd FileType markdown nnoremap <silent> <F10> :MarkdownPreview<CR>
 autocmd FileType markdown nnoremap <silent> <F11> :MarkdownPreviewStop<CR>
+
+" ack.vim , required ripgrep
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
+endif
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
+let g:ack_autofold_results=1
 " }}}
