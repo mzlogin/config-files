@@ -1,8 +1,3 @@
---langdef=smali
---langmap=smali:.smali
---regex-smali=/^\.field (public |private |protected )?(static )?(final )?(synthetic )?([^:]*):.*/\5/f,field/
---regex-smali=/^\.method (public |private |protected )?(static )?(final )?(varargs )?(bridge )?(synthetic )?(declared-synchronized )?(.*)\(.*/\8/m,method/
-
 --langdef=markdown
 --langmap=markdown:.md
 --regex-markdown=/^#{1}[ \t]*([^#]+.*)/. \1/h,headings/

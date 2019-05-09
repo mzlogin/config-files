@@ -45,8 +45,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
     ```
     brew install cscope
-    brew tap universal-ctags/universal-ctags
-    brew install --HEAD universal-ctags
+    brew install --HEAD universal-ctags/universal-ctags/universal-ctags
     brew install ripgrep
     ```
 
