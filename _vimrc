@@ -283,7 +283,7 @@ let g:NERDTreeIgnore = ['\~$', '\.pyc$', '\.class$']
 nnoremap <leader>n :NERDTreeToggle<CR>
 
 " OmniCppComplete
-nnoremap <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+nnoremap <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extras=+q .<CR>
 nnoremap <C-F11> :!cscope -Rb <CR>
 let OmniCpp_ShowPrototypeInAbbr = 1
 let OmniCpp_MayCompleteScope = 1
