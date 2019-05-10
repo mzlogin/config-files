@@ -393,6 +393,8 @@ autocmd FileType mermaid call SingleCompile#SetOutfile('mermaid', 'mmdc', '$(FIL
 autocmd FileType python call SingleCompile#ChooseCompiler('python', 'python3')
 autocmd FileType java call SingleCompile#SetCompilerTemplate('java', 'sunjdk', 'Sun Java Development Kit',
             \'javac', '-encoding utf-8 $(FILE_NAME)$', 'java $(FILE_TITLE)$')
+autocmd FileType cpp call SingleCompile#SetCompilerTemplate('cpp', 'g++', 'GNU C++ Compiler',
+            \'g++', '-std=c++17 -g -o a.out $(FILE_NAME)$', 'a.out')
 
 " markdown-preview
 autocmd FileType markdown nnoremap <silent> <F10> :MarkdownPreview<CR>
