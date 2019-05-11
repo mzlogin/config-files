@@ -397,8 +397,8 @@ autocmd FileType cpp call SingleCompile#SetCompilerTemplate('cpp', 'g++', 'GNU C
             \'g++', '-std=c++17 -g -o a.out $(FILE_NAME)$', 'a.out')
 
 " markdown-preview
-autocmd FileType markdown nnoremap <silent> <F10> :MarkdownPreview<CR>
-autocmd FileType markdown nnoremap <silent> <F11> :MarkdownPreviewStop<CR>
+autocmd FileType markdown nnoremap <silent> <F5> :MarkdownPreview<CR>
+autocmd FileType markdown nnoremap <silent> <F6> :MarkdownPreviewStop<CR>
 
 " ack.vim , required ripgrep
 if executable('rg')
