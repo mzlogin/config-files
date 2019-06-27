@@ -58,3 +58,4 @@ let g:template['java']['sop'] = 'System.out.println('
 let g:template['gitcommit'] = {}
 let g:template['gitcommit']['cs'] = "--user=".g:user_for_snippets." --story="
 let g:template['gitcommit']['cb'] = "--user=".g:user_for_snippets." --bug="
+let g:template['gitcommit']['ct'] = "--user=".g:user_for_snippets." --task="
