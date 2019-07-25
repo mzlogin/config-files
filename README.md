@@ -66,6 +66,13 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
     Start vim, and exec `:PluginInstall`
 
+* Install markdown-preview.nvim
+
+    ```
+    cd ~/vimfiles/bundle/markdown-preview.nvim/app
+    yarn install
+    ```
+
 * Build YouCompleteMe plugin
 
     Confirm you have `libclang.dylib`, and then
@@ -182,6 +189,13 @@ The Quick Start below is just for self use, I don't promise it will work well in
 * Install plugins
 
     Start vim, and exec `:PluginInstall`
+
+* Install markdown-preview.nvim
+
+    ```
+    cd ~/vimfiles/bundle/markdown-preview.nvim/app
+    yarn install
+    ```
 
 * place iconv.dll
 
