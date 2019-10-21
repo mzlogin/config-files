@@ -89,11 +89,11 @@ Plugin 'posva/vim-vue'
 
 " God's presence, but build it is to death.
 " In Windows, config ycm manually and use :packadd to lazy load
-if has('python')
-    if has('gui_macvim')
-        Plugin 'Valloric/YouCompleteMe', {'pinned': 1}
-    endif
-endif
+"if has('python')
+"    if has('gui_macvim')
+"        Plugin 'Valloric/YouCompleteMe', {'pinned': 1}
+"    endif
+"endif
 
 " devdocs
 Plugin 'rhysd/devdocs.vim'
@@ -337,10 +337,10 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
 " YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0
-nnoremap <leader>g :YcmCompleter GoTo<CR>
-nnoremap <leader>r :YcmCompleter GoToReferences<CR>
+"let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+"let g:ycm_confirm_extra_conf = 0
+"nnoremap <leader>g :YcmCompleter GoTo<CR>
+"nnoremap <leader>r :YcmCompleter GoToReferences<CR>
 
 " minibufexpl.vim
 nnoremap <leader>e :MBEToggle<CR>
