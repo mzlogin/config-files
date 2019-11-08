@@ -196,7 +196,9 @@
                 [
                     "alt+9"
                 ]
-            }
+            },
+            { "command": "copy", "keys": ["ctrl+c"] },
+            { "command": "paste", "keys": ["ctrl+v"]}
         ],
         "requestedTheme" : "system",
         "showTabsInTitlebar" : false,
