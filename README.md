@@ -25,6 +25,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
         * [Emacs](#emacs-1)
     * [Ubuntu](#ubuntu)
 * [Other common requirements](#other-common-requirements)
+    * [asciidoc](#asciidoc)
 
 <!-- vim-markdown-toc -->
 
@@ -334,7 +335,13 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 ## Other common requirements
 
+### asciidoc
+
 ```
 gem install asciidoctor
 gem install asciidoctor-pdf --pre
 ```
+
+Install Chrome Extension below, and enable file address access.
+
+<https://asciidoctor.org/docs/editing-asciidoc-with-live-preview/>
