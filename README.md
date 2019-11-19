@@ -24,6 +24,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
         * [Vim](#vim-1)
         * [Emacs](#emacs-1)
     * [Ubuntu](#ubuntu)
+* [Other common requirements](#other-common-requirements)
 
 <!-- vim-markdown-toc -->
 
@@ -330,3 +331,10 @@ The Quick Start below is just for self use, I don't promise it will work well in
     Start vim, and exec `:PluginInstall`
 
 * Done!
+
+## Other common requirements
+
+```
+gem install asciidoctor
+gem install asciidoctor-pdf --pre
+```
