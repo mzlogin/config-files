@@ -339,6 +339,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 ```
 gem install asciidoctor
+gem install coderay
 gem install asciidoctor-pdf --pre
 ```
 

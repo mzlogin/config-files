@@ -427,5 +427,6 @@ augroup asciidoctor
 	au!
 	au BufEnter *.adoc,*.asciidoc call AsciidoctorMappings()
 augroup END
+autocmd FileType asciidoc nnoremap <silent> <F5> :Asciidoctor2HTML<CR>:AsciidoctorOpenHTML<CR>
 
 " }}}
