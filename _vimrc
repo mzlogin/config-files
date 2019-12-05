@@ -230,6 +230,7 @@ nnoremap <leader>lv :lv /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
 " FileType specific settings {{{
 autocmd BufRead,BufNewFile *.{mmd} set filetype=mermaid
 autocmd BufRead,BufNewFile *.{uixml} set filetype=html
+autocmd BufRead,BufNewFile *.{gv} set filetype=dot
 autocmd FileType html,javascript,css,less,vue,wxml,wxss setlocal shiftwidth=2 tabstop=2
 autocmd FileType proto setlocal shiftwidth=2 tabstop=2
 autocmd FileType smali setlocal cindent
