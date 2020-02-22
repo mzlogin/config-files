@@ -113,6 +113,9 @@ Plugin 'mileszs/ack.vim'
 " asciidoc
 Plugin 'habamax/vim-asciidoctor'
 
+" graphviz
+"Plugin 'wannesm/wmgraphviz.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -227,10 +230,11 @@ nnoremap <leader>lv :lv /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
 " FileType specific settings {{{
 autocmd BufRead,BufNewFile *.{mmd} set filetype=mermaid
 autocmd BufRead,BufNewFile *.{uixml} set filetype=html
+autocmd BufRead,BufNewFile *.{gv} set filetype=dot
 autocmd FileType html,javascript,css,less,vue,wxml,wxss setlocal shiftwidth=2 tabstop=2
 autocmd FileType proto setlocal shiftwidth=2 tabstop=2
 autocmd FileType smali setlocal cindent
-autocmd FileType conf,markdown,proto,mermaid setlocal smartindent
+autocmd FileType conf,markdown,proto,mermaid,dot setlocal smartindent
 autocmd FileType vim setlocal foldmethod=marker
 autocmd BufRead,BufNewFile *.{log} set filetype=log
 autocmd FileType log set autoread
@@ -429,4 +433,6 @@ augroup asciidoctor
 augroup END
 autocmd FileType asciidoc nnoremap <silent> <F5> :Asciidoctor2HTML<CR>:AsciidoctorOpenHTML<CR>
 
+" wmgraphviz.vim
+"autocmd FileType dot nnoremap <silent> <F5> :GraphvizCompile<CR>:GraphvizShow<CR>
 " }}}
