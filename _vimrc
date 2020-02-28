@@ -23,7 +23,7 @@ Plugin 'mzlogin/cscope_macros.vim'
 Plugin 'mzlogin/vim-markdown-toc'
 Plugin 'mzlogin/vim-kramdown-tab'
 
-Plugin 'mzlogin/markdown-preview.nvim'
+Plugin 'iamcco/markdown-preview.nvim'
 
 " C++
 Plugin 'vim-scripts/OmniCppComplete'
@@ -406,6 +406,7 @@ autocmd FileType cpp call SingleCompile#SetCompilerTemplate('cpp', 'g++', 'GNU C
 " markdown-preview
 autocmd FileType markdown nnoremap <silent> <F5> :MarkdownPreview<CR>
 autocmd FileType markdown nnoremap <silent> <F6> :MarkdownPreviewStop<CR>
+let g:mkdp_markdown_css = expand('~/custom-markdown.css')
 
 " ack.vim , required ripgrep
 if executable('rg')
