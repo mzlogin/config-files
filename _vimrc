@@ -116,6 +116,10 @@ Plugin 'habamax/vim-asciidoctor'
 " graphviz
 "Plugin 'wannesm/wmgraphviz.vim'
 
+if has('gui_macvim')
+    Plugin 'ybian/smartim'
+endif
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
