@@ -56,6 +56,6 @@ let g:template['java']['sop'] = 'System.out.println('
 " ---------------------------------------------
 " git commit msg
 let g:template['gitcommit'] = {}
-let g:template['gitcommit']['cs'] = "--user=".g:user_for_snippets." --story="
-let g:template['gitcommit']['cb'] = "--user=".g:user_for_snippets." --bug="
-let g:template['gitcommit']['ct'] = "--user=".g:user_for_snippets." --task="
+let g:template['gitcommit']['cs'] = "--story=".g:rs."...".g:re." --user=".g:user_for_snippets." "
+let g:template['gitcommit']['cb'] = "--bug=".g:rs."...".g:re." --user=".g:user_for_snippets." "
+let g:template['gitcommit']['ct'] = "--task=".g:rs."...".g:re." --user=".g:user_for_snippets." "
