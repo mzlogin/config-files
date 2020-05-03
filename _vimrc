@@ -120,6 +120,9 @@ if has('gui_macvim')
     Plugin 'ybian/smartim'
 endif
 
+" paste image in markdown
+Plugin 'ferrine/md-img-paste.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -440,4 +443,8 @@ autocmd FileType asciidoc nnoremap <silent> <F5> :Asciidoctor2HTML<CR>:Asciidoct
 
 " wmgraphviz.vim
 "autocmd FileType dot nnoremap <silent> <F5> :GraphvizCompile<CR>:GraphvizShow<CR>
+
+" md-img-paste.vim
+autocmd FileType markdown nmap <buffer><silent> <leader>i :call mdip#MarkdownClipboardImage()<CR>
+let g:mdip_imgdir = '.'
 " }}}
