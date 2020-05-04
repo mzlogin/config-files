@@ -333,6 +333,7 @@ let g:Lf_MruWildIgnore = {
             \ 'dir': ['.git'],
             \ 'file': []
             \ }
+let g:Lf_ShowDevIcons = 0
 
 " auto-pairs
 let g:AutoPairsShortcutToggle = '<leader>p'
