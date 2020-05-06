@@ -1,17 +1,14 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "globals" : 
-    {
-        "alwaysShowTabs" : true,
-        "defaultProfile" : "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-        "initialCols" : 120,
-        "initialRows" : 30,
-        "keybindings" : [ ],
-        "requestedTheme" : "system",
-        "showTabsInTitlebar" : false,
-        "showTerminalTitleInTitlebar" : false,
-        "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
-    },
+    "alwaysShowTabs" : true,
+    "defaultProfile" : "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "initialCols" : 120,
+    "initialRows" : 30,
+    "keybindings" : [ ],
+    "requestedTheme" : "system",
+    "showTabsInTitlebar" : false,
+    "showTerminalTitleInTitlebar" : false,
+    "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502",
     "profiles" : 
     [
         {
