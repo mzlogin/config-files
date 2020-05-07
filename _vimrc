@@ -1,136 +1,132 @@
-" Vundle settings {{{
-set nocompatible              " be iMproved, required
-filetype off                  " required
+let s:darwin = has('mac')
+let s:windows = has('windows')
+let s:gui = has('gui')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/vimfiles/bundle/Vundle.vim
-let path='~/vimfiles/bundle'
-call vundle#begin(path)
+" vim-plug settings {{{
+set rtp+=~/vimfiles
+let path='~/vimfiles/plugged'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin(path)
 
 " file explorer
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " tagbar
-Plugin 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 
 " cscope autoload and key map
-Plugin 'mzlogin/cscope_macros.vim'
+Plug 'mzlogin/cscope_macros.vim'
 
 " markdown
-Plugin 'mzlogin/vim-markdown-toc'
-Plugin 'mzlogin/vim-kramdown-tab'
+Plug 'mzlogin/vim-markdown-toc'
+Plug 'mzlogin/vim-kramdown-tab'
 
-Plugin 'iamcco/markdown-preview.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " C++
-Plugin 'vim-scripts/OmniCppComplete'
-Plugin 'vim-scripts/a.vim'
-Plugin 'mbbill/code_complete'
+Plug 'vim-scripts/OmniCppComplete'
+Plug 'vim-scripts/a.vim'
+Plug 'mbbill/code_complete'
 
 " Java
-Plugin 'vim-scripts/javacomplete'
+Plug 'vim-scripts/javacomplete'
 
 " comment lines in a program
-Plugin 'vim-scripts/EnhCommentify.vim'
+Plug 'vim-scripts/EnhCommentify.vim'
 
 " MiniBufExpl
-Plugin 'fholgado/minibufexpl.vim'
+Plug 'fholgado/minibufexpl.vim'
 
 " characters draw
-Plugin 'vim-scripts/DrawIt'
+Plug 'vim-scripts/DrawIt'
 
 " js formatter
-Plugin 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 
 " fuzzy find files, buffers, mrus
 if has('python') || has('python3')
-    Plugin 'Yggdroot/LeaderF'
+    if s:windows
+        Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
+    else
+        Plug 'Yggdroot/LeaderF', { 'do': '.\install.sh' }
+    endif
 endif
 
 " brackets auto pair
-Plugin 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 " web indent
-Plugin 'jason0x43/vim-js-indent'
-Plugin 'lukaszb/vim-web-indent'
+Plug 'jason0x43/vim-js-indent'
+Plug 'lukaszb/vim-web-indent'
 
 " Qml
-Plugin 'peterhoeg/vim-qml'
+Plug 'peterhoeg/vim-qml'
 
 " h5
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 
 " chinese copywriting
-Plugin 'hotoo/pangu.vim'
+Plug 'hotoo/pangu.vim'
 
 " java decompile
-Plugin 'mzlogin/vim-smali'
+Plug 'mzlogin/vim-smali'
 
 " python
-Plugin 'hynek/vim-python-pep8-indent'
+Plug 'hynek/vim-python-pep8-indent'
 
 " table mode mostly for markdown
-Plugin 'dhruvasagar/vim-table-mode'
+Plug 'dhruvasagar/vim-table-mode'
 
 " detect file encoding
-Plugin 'mbbill/fencview'
+Plug 'mbbill/fencview'
 
 " CoffeeScript
-Plugin 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 
 " php
-Plugin 'StanAngeloff/php.vim'
+Plug 'StanAngeloff/php.vim'
 
 " vue
-Plugin 'posva/vim-vue'
+Plug 'posva/vim-vue'
 
 " God's presence, but build it is to death.
 " In Windows, config ycm manually and use :packadd to lazy load
 "if has('python')
-"    if has('gui_macvim')
-"        Plugin 'Valloric/YouCompleteMe', {'pinned': 1}
+"    if s:gui && s:darwin
+"        Plug 'Valloric/YouCompleteMe', {'pinned': 1}
 "    endif
 "endif
 
 " devdocs
-Plugin 'rhysd/devdocs.vim'
+Plug 'rhysd/devdocs.vim'
 
 " json pretty prints
-Plugin 'tpope/vim-jdaddy'
+Plug 'tpope/vim-jdaddy'
 
 " compile and run
-Plugin 'xuhdev/SingleCompile'
+Plug 'xuhdev/SingleCompile'
 
 " miniprogram
-Plugin 'chemzqm/wxapp.vim'
+Plug 'chemzqm/wxapp.vim'
 
 " search
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 " asciidoc
-Plugin 'habamax/vim-asciidoctor'
+Plug 'habamax/vim-asciidoctor'
 
 " graphviz
-"Plugin 'wannesm/wmgraphviz.vim'
+"Plug 'wannesm/wmgraphviz.vim'
 
-if has('gui_macvim')
-    Plugin 'ybian/smartim'
+if s:darwin
+    Plug 'ybian/smartim'
 endif
 
 " paste image in markdown
-Plugin 'ferrine/md-img-paste.vim'
+Plug 'ferrine/md-img-paste.vim'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-" filetype plugin on
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+call plug#end()            " required
 " }}}
 
 " Basic settings {{{
@@ -146,10 +142,10 @@ set tabstop=4
 set expandtab
 
 " gui options
-if has("gui_running")
-    if has("win32")
+if s:gui
+    if s:windows
         autocmd GUIEnter * simalt ~x
-    elseif has("gui_macvim")
+    elseif s:darwin
         set guifont=Monaco:h13
 "        set fullscreen
         set lines=60 columns=160
@@ -177,8 +173,8 @@ set fileencodings=ucs-bom,utf-8,cp936,big5,latin-1   " ucs-bom, compatible notep
 " menu and bottom messy code
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
-if has("win32")
-    language messages zh_US.utf-8
+if s:windows
+    language messages en_US.utf-8
 endif
 
 " color scheme
@@ -264,7 +260,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <leader>w= <C-w><C-=>
 nnoremap <leader>wm <C-w>\|<C-w>_
 
-if has("gui_macvim")
+if s:gui && s:darwin
     " auto-complete
     inoremap <D-/> <C-x><C-o>
     " insert mode move settings
@@ -290,7 +286,7 @@ nnoremap <leader>gf :e <cfile><cr>
 
 " }}}
 
-" Plugin settings {{{
+" Plug settings {{{
 " nerdtree
 let NERDTreeWinPos=1
 let g:NERDTreeIgnore = ['\~$', '\.pyc$', '\.class$']
@@ -343,7 +339,7 @@ let g:AutoPairsMultilineClose = 0
 "let g:AutoPairsMapBS = 0
 autocmd FileType c,cpp let b:AutoPairs = {'[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
 autocmd FileType smali let b:AutoPairs = {'(':')', '{':'}',"'":"'",'"':'"', '`':'`'}
-if has("gui_macvim")
+if s:gui && s:darwin
     let g:AutoPairsShortcutFastWrap = '<D-e>'
 endif
 

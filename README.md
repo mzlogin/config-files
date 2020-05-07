@@ -2,13 +2,13 @@
 
 Contains config files below.
 
-1. vim config for Mac OS X/Win7/Ubuntu via Vundle.
+1. Vim config for Mac OS X/Windows via vim-plug.
 
-2. stl views support for gdb.
+2. STL views support for gdb.
 
-3. stl tags file generate from <http://www.vim.org/scripts/script.php?script_id=2358>.
+3. STL tags file generate from <http://www.vim.org/scripts/script.php?script_id=2358>.
 
-4. emacs config for Win7.
+4. Emacs config for Windows.
 
 The Quick Start below is just for self use, I don't promise it will work well in your environment.
 
@@ -23,7 +23,6 @@ The Quick Start below is just for self use, I don't promise it will work well in
     * [Windows](#windows)
         * [Vim](#vim-1)
         * [Emacs](#emacs-1)
-    * [Ubuntu](#ubuntu)
 * [Other common requirements](#other-common-requirements)
     * [asciidoc](#asciidoc)
 
@@ -35,10 +34,10 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 #### Vim
 
-* Set up Vundle:
+* Set up vim-plug:
 
     ```
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     ```
 
 * install cscope, universal-ctags and ripgrep
@@ -49,6 +48,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
     brew install cscope
     brew install --HEAD universal-ctags/universal-ctags/universal-ctags
     brew install ripgrep
+    brew install yarn
     ```
 
 * generate tags files (*optional*)
@@ -66,25 +66,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 * Install plugins
 
-    Start vim, and exec `:PluginInstall`
-
-* Install markdown-preview.nvim
-
-    ```
-    cd ~/vimfiles/bundle/markdown-preview.nvim/app
-    yarn install
-    ```
-
-* Build YouCompleteMe plugin
-
-    Confirm you have `libclang.dylib`, and then
-
-    ```
-    brew install cmake
-    cd ~/vimfiles/bundle/YouComplete
-    git submodule update --init --recursive
-    ./install.sh --clang-completer --tern-completer --system-libclang
-    ```
+    Start vim, and exec `:PlugInstall`
 
 * Done!
 
@@ -153,10 +135,17 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
 #### Vim
 
-* Set up Vundle:
+* Set up vim-plug:
 
     ```
-    git clone https://github.com/VundleVim/Vundle.vim.git %userprofile%/vimfiles/bundle/Vundle.vim
+    md ~\vimfiles\autoload
+    $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    (New-Object Net.WebClient).DownloadFile(
+      $uri,
+      $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
+        "~\vimfiles\autoload\plug.vim"
+      )
+    )
     ```
 
 * place ctags
@@ -188,39 +177,17 @@ The Quick Start below is just for self use, I don't promise it will work well in
     git pull origin master
     ```
 
+* install yarn
+
 * Install plugins
 
-    Start vim, and exec `:PluginInstall`
-
-* Install markdown-preview.nvim
-
-    ```
-    cd ~/vimfiles/bundle/markdown-preview.nvim/app
-    yarn install
-    ```
+    Start vim, and exec `:PlugInstall`
 
 * place iconv.dll
 
     The plugin fencview, for file encoding detect and switch, required this dll, so download one and add its path to PATH environment variable.
 
     (You can download iconv.dll I am used [here](http://pan.baidu.com/s/1pJGOpCJ).)
-
-* Config YouCompleteMe (*optional*)
-
-    YouCompleteMe slow down Vim startup time obviously in Windows, so I use `:packadd YouCompleteMe` to lazy load.
-
-    Installation references <https://github.com/Valloric/YouCompleteMe#windows>, the only difference is don't install YouCompleteMe with Vundle, just clone the source to `%userprofile%\vimfiles\pack\ycm\opt`, and finish the remain steps in offical doc.
-
-    My install command is `python install.py --clang-completer --tern-completer --msvc=12`.
-
-    A problem I have met should note here is `CMAKE_C_COMPILER and CMAKE_CXX_COMPILER not found`, I fixed it with add the following two lines before `project( YouCompleteMe )` in `third_party/ycmd/cpp/CMakeFile.txt`:
-
-    ```
-    SET(CMAKE_C_COMPILER "D:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin/cl.exe")
-    SET(CMAKE_CXX_COMPILER "D:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin/cl.exe")
-    ```
-
-    Error `no module named concurrent.futures` may occured when `:packadd YouCompleteMe` with python 2.7.x, `pip install futures` can fix it.
 
 * Done!
 
@@ -287,51 +254,6 @@ The Quick Start below is just for self use, I don't promise it will work well in
     M-x package-install <RETURN>
     ggtags <RETURN>
     ```
-
-### Ubuntu
-
-* Set up Vundle:
-
-    ```
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
-    ```
-
-* install ctags
-
-    The plugin taglist required ctags, so install it.
-
-    ```
-    sudo apt-get install exuberant-ctags
-    ```
-
-    or ref <https://github.com/universal-ctags/ctags> to use universal-ctags.
-
-* install cscope
-
-    If you want to view code, you may need cscope support, so install it.
-
-    ```
-    sudo apt-get install cscope
-    ```
-
-* generate tags files (*optional*)
-
-    For better c++ coding experience, generate your crttags and win32tags into ~/tags-files dir.
-
-* pull config files:
-
-    ```
-    cd ~
-    git init
-    git remote add origin https://github.com/mzlogin/config-files.git
-    git pull origin master
-    ```
-
-* Install plugins
-
-    Start vim, and exec `:PluginInstall`
-
-* Done!
 
 ## Other common requirements
 
