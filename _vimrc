@@ -1,6 +1,6 @@
 let s:darwin = has('mac')
-let s:windows = has('windows')
-let s:gui = has('gui')
+let s:windows = has('win32') || has('win64')
+let s:gui = has('gui_running')
 
 " vim-plug settings {{{
 set rtp+=~/vimfiles

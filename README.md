@@ -37,7 +37,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 * Set up vim-plug:
 
     ```
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    curl -fLo ~/vimfiles/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     ```
 
 * install cscope, universal-ctags and ripgrep
