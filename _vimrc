@@ -125,6 +125,9 @@ endif
 " paste image in markdown
 Plug 'ferrine/md-img-paste.vim'
 
+" base64 encode / decode
+Plug 'equal-l2/vim-base64'
+
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 " }}}
