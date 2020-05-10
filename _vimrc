@@ -158,10 +158,15 @@ if s:gui
         set guifont=Ubuntu\ Mono\ 12
     endif
     set imsearch=1
-    set cursorline      " highlight current line
     set guioptions-=m   " menu
     set guioptions-=T   " toolbar
 endif
+
+" highlight current line
+set cursorline
+
+" ruler in status bar
+set ruler
 
 " line number
 set number
@@ -217,9 +222,6 @@ set foldlevelstart=99
 " no indent for case, default, public, private and protected
 set cino+=:0,g0
 
-" trailing whitespaces
-nnoremap <leader><space> :%s/ \+$//e<CR>
-
 " autoclose complete window
 autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest
@@ -229,8 +231,6 @@ if has("autocmd")
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
 
-" list search results in location window
-nnoremap <leader>lv :lv /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
 " }}}
 
 " FileType specific settings {{{
@@ -286,6 +286,28 @@ endif
 
 " open/create file under cursor
 nnoremap <leader>gf :e <cfile><cr>
+
+" split fast
+nnoremap <leader>\ :vs<cr>
+nnoremap <leader>- :sp<cr>
+
+" move on "screen lines"
+nnoremap j gj
+nnoremap k gk
+
+" list search results in location window
+nnoremap <leader>lv :lv /<c-r>=expand("<cword>")<cr>/ %<cr>:lw<cr>
+
+" center the screen when jumping through the changelist
+nnoremap g; g;zz
+nnoremap g, g,zz
+
+" scroll through the command history
+cnoremap <c-j> <down>
+cnoremap <c-k> <up>
+
+" trailing whitespaces
+nnoremap <leader><space> :%s/ \+$//e<CR>
 
 " }}}
 
@@ -343,7 +365,9 @@ let g:AutoPairsMultilineClose = 0
 autocmd FileType c,cpp let b:AutoPairs = {'[':']', '{':'}',"'":"'",'"':'"', '`':'`'}
 autocmd FileType smali let b:AutoPairs = {'(':')', '{':'}',"'":"'",'"':'"', '`':'`'}
 if s:gui && s:darwin
-    let g:AutoPairsShortcutFastWrap = '<D-e>'
+    let g:AutoPairsShortcutFastWrap = '<D-r>'
+else
+    let g:AutoPairsShortcutFastWrap = '<M-r>'
 endif
 
 " emmet-vim
