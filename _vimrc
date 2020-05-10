@@ -32,7 +32,7 @@ Plug 'mbbill/code_complete'
 Plug 'vim-scripts/javacomplete'
 
 " comment lines in a program
-Plug 'vim-scripts/EnhCommentify.vim'
+Plug 'tomtom/tcomment_vim'
 
 " MiniBufExpl
 Plug 'fholgado/minibufexpl.vim'
@@ -309,6 +309,16 @@ cnoremap <c-k> <up>
 " trailing whitespaces
 nnoremap <leader><space> :%s/ \+$//e<CR>
 
+
+" ref https://github.com/Valloric/dotfiles/blob/master/vim/vimrc.vim
+" fast saving
+nnoremap <leader>w :w!<cr>
+
+" <leader>v brings up .vimrc
+" <leader>V reloads it and makes all changes active (file has to be saved first)
+noremap <leader>v :e! $MYVIMRC<CR>
+noremap <silent> <leader>V :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
 " }}}
 
 " Plug settings {{{
@@ -383,16 +393,9 @@ autocmd FileType html,css EmmetInstall
 " minibufexpl.vim
 nnoremap <leader>e :MBEToggle<CR>
 
-" EnhCommentify.vim
-if !exists('g:EnhCommentifyCallbackExists')
-    function EnhCommentifyCallback(ft)
-        if a:ft == 'smali'
-            let b:ECcommentOpen = '#'
-            let b:ECcommentClose = ''
-        endif
-    endfunction
-    let g:EnhCommentifyCallbackExists = 'Yes'
-endif
+" tcomment_vim
+nmap <leader>c gcc
+vmap <leader>c gc
 
 " vim-table-mode
 let g:table_mode_corner = '|'
