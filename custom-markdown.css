@@ -287,3 +287,6 @@
   box-sizing: border-box;
   padding: 0;
 }
+img + em {
+  color: grey;
+}
