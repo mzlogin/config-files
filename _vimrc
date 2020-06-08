@@ -20,6 +20,9 @@ Plug 'mzlogin/cscope_macros.vim'
 " markdown
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'mzlogin/vim-kramdown-tab'
+if s:windows
+    Plug 'tpope/vim-markdown'
+endif
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
