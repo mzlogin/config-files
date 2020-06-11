@@ -37,7 +37,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 * Set up vim-plug:
 
     ```
-    curl -fLo ~/vimfiles/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    curl -fLo ~/vimfiles/autoload/plug.vim --create-dirs https://cdn.jsdelivr.net/gh/junegunn/vim-plug/plug.vim
     ```
 
 * install cscope, universal-ctags and ripgrep
@@ -139,7 +139,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
 
     ```
     md ~\vimfiles\autoload
-    $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    $uri = 'https://cdn.jsdelivr.net/gh/junegunn/vim-plug/plug.vim'
     (New-Object Net.WebClient).DownloadFile(
       $uri,
       $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
