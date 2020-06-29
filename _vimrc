@@ -125,6 +125,10 @@ if s:darwin
     Plug 'ybian/smartim'
 endif
 
+if s:windows
+    Plug 'lyokha/vim-xkbswitch'
+endif
+
 " paste image in markdown
 Plug 'ferrine/md-img-paste.vim'
 
@@ -477,4 +481,10 @@ autocmd FileType asciidoc nnoremap <silent> <F5> :Asciidoctor2HTML<CR>:Asciidoct
 " md-img-paste.vim
 autocmd FileType markdown nmap <buffer><silent> <leader>i :call mdip#MarkdownClipboardImage()<CR>
 let g:mdip_imgdir = '.'
+
+" vim-xkbswitch
+if s:windows
+    let g:XkbSwitchLib = expand('~/vim-ext-bin/libxkbswitch32.dll')
+endif
+
 " }}}
