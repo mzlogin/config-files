@@ -208,7 +208,8 @@ set nobackup
 set nowritebackup
 
 " fix windows path separator
-set shellslash
+" set shellslash
+set completeslash=slash
 
 " highlight
 syntax on
