@@ -59,3 +59,4 @@ let g:template['gitcommit'] = {}
 let g:template['gitcommit']['cs'] = "--story=".g:rs."...".g:re." --user=".g:user_for_snippets." "
 let g:template['gitcommit']['cb'] = "--bug=".g:rs."...".g:re." --user=".g:user_for_snippets." "
 let g:template['gitcommit']['ct'] = "--task=".g:rs."...".g:re." --user=".g:user_for_snippets." "
+let g:template['gitcommit']['cr'] = "ref ".g:rs."...".g:re
