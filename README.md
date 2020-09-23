@@ -20,6 +20,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
     * [Mac OS X](#mac-os-x)
         * [Vim](#vim)
         * [Emacs](#emacs)
+        * [zsh](#zsh)
     * [Windows](#windows)
         * [Vim](#vim-1)
         * [Emacs](#emacs-1)
@@ -130,6 +131,14 @@ The Quick Start below is just for self use, I don't promise it will work well in
     M-x package-install <RETURN>
     ggtags <RETURN>
     ```
+
+#### zsh
+
+Add the following line to your ~/.zshrc:
+
+```sh
+test -e "${HOME}/my.zshrc" && source "${HOME}/my.zshrc"
+```
 
 ### Windows
 
