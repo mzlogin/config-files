@@ -63,7 +63,7 @@ Plug 'jason0x43/vim-js-indent'
 Plug 'lukaszb/vim-web-indent'
 
 " Qml
-Plug 'peterhoeg/vim-qml'
+" Plug 'peterhoeg/vim-qml'
 
 " h5
 Plug 'mattn/emmet-vim'
