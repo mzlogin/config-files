@@ -237,6 +237,8 @@ set completeopt=menuone,menu,longest
 " jump to the last position when reopening a file
 if has("autocmd")
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+    " jump to top while git commit
+    autocmd BufReadPost COMMIT_EDITMSG exe "normal! gg"
 endif
 
 " }}}
