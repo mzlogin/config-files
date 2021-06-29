@@ -57,10 +57,21 @@ get_current_branch() {
     git symbolic-ref --short -q HEAD
 }
 
+git_merge_to() {
+    print merge $1 to $2
+    git checkout $2
+    gpull
+    vared -p 'Would you like to merge? (y/n) ' -c tmp
+    if [[ "${tmp}" == "y" ]] then
+        git merge $1
+    fi
+}
+
 # alias
 alias gs='git status'
 alias gpull='git pull origin $(get_current_branch)'
 alias gpush='git push origin $(get_current_branch)'
+alias gmt='git_merge_to $(get_current_branch)'
 
 alias ll='ls -l'
 
