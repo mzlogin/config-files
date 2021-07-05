@@ -60,7 +60,7 @@ get_current_branch() {
 git_merge_to() {
     print merge $1 to $2
     git checkout $2
-    gpull
+    git pull origin $(get_current_branch)
     vared -p 'Would you like to merge? (y/n) ' -c tmp
     if [[ "${tmp}" == "y" ]] then
         git merge $1
