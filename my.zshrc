@@ -72,6 +72,8 @@ alias gs='git status'
 alias gpull='git pull origin $(get_current_branch)'
 alias gpush='git push origin $(get_current_branch)'
 alias gmt='git_merge_to $(get_current_branch)'
+alias gcm='git checkout master'
+alias gcd='git checkout develop'
 
 alias ll='ls -l'
 
