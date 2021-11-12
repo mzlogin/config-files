@@ -490,4 +490,8 @@ if s:windows
     let g:XkbSwitchLib = expand('~/vim-ext-bin/libxkbswitch32.dll')
 endif
 
+" vim-base64
+vnoremap <silent> <leader>ab :<c-u>call base64#encode_and_substitute()<cr>
+vnoremap <silent> <leader>ba :<c-u>call base64#decode_and_substitute()<cr>
+
 " }}}
