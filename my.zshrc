@@ -75,6 +75,7 @@ alias gmt='git_merge_to $(get_current_branch)'
 alias gc='git checkout'
 alias gcm='git checkout master'
 alias gcd='git checkout develop'
+alias gm='git merge'
 
 alias ll='ls -l'
 
