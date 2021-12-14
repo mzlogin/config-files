@@ -78,6 +78,7 @@ alias gcd='git checkout develop'
 alias gm='git merge'
 
 alias ll='ls -l'
+alias tailf='tail -f'
 
 export TK_SILENCE_DEPRECATION=1
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
