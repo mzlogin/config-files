@@ -135,6 +135,9 @@ Plug 'ferrine/md-img-paste.vim'
 " base64 encode / decode
 Plug 'equal-l2/vim-base64'
 
+" vim terminal
+Plug 'skywind3000/vim-terminal-help'
+
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 " }}}
@@ -281,6 +284,7 @@ if s:gui && s:darwin
     inoremap ∆ <Down>
     inoremap ˚ <Up>
     inoremap ˙ <Left>
+    tnoremap œ <c-\><c-n>
 else
     " auto-complete
     inoremap <A-/> <C-x><C-o>
@@ -493,5 +497,9 @@ endif
 " vim-base64
 vnoremap <silent> <leader>ab :<c-u>call base64#encode_and_substitute()<cr>
 vnoremap <silent> <leader>ba :<c-u>call base64#decode_and_substitute()<cr>
+
+" vim-terminal-help
+let g:terminal_key = '≠'
+let g:terminal_close = 1
 
 " }}}
