@@ -5,6 +5,7 @@ let s:gui = has('gui_running')
 " vim-plug settings {{{
 set rtp+=~/vimfiles
 let path='~/vimfiles/plugged'
+let g:plug_url_format = 'git@github.com:%s.git'
 
 call plug#begin(path)
 
