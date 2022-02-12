@@ -98,3 +98,4 @@ alias ta=tmux_attach
 
 test -e "${HOME}/.zsh/_iterm2/iterm2-shell-integration.zsh" && source "${HOME}/.zsh/_iterm2/iterm2-shell-integration.zsh"
 test -e "${HOME}/.zsh/_git-flow/git-flow-completion.zsh" && source "${HOME}/.zsh/_git-flow/git-flow-completion.zsh"
+test -e "${HOME}/.zsh/_git_merge_to/git_merge_to-completion.zsh" && source "${HOME}/.zsh/_git_merge_to/git_merge_to-completion.zsh"
