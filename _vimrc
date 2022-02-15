@@ -49,11 +49,7 @@ Plug 'pangloss/vim-javascript'
 
 " fuzzy find files, buffers, mrus
 if has('python') || has('python3')
-    if s:windows
-        Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
-    else
-        Plug 'Yggdroot/LeaderF', { 'do': '.\install.sh' }
-    endif
+    Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 endif
 
 " brackets auto pair
@@ -376,10 +372,12 @@ nnoremap <silent> <leader>m :LeaderfMru<CR>
 let g:Lf_DefaultMode = 'FullPath'
 let g:Lf_IndexTimeLimit = 1200
 let g:Lf_MruWildIgnore = {
-            \ 'dir': ['.git'],
+            \ 'dir': [],
             \ 'file': []
             \ }
 let g:Lf_ShowDevIcons = 0
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
 
 " auto-pairs
 let g:AutoPairsShortcutToggle = '<leader>p'
