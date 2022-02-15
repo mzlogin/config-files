@@ -76,6 +76,8 @@ alias gc='git checkout'
 alias gcm='git checkout master'
 alias gcd='git checkout develop'
 alias gm='git merge'
+alias gb='git branch'
+alias gr='git remote -v'
 
 alias ll='ls -l'
 alias tailf='tail -f'
