@@ -98,6 +98,18 @@ function tmux_attach() {
 }
 alias ta=tmux_attach
 
+# proxy
+function proxy_on() {
+    export http_proxy="http://127.0.0.1:54107"
+    export https_proxy=$http_proxy
+    echo -e "proxy on"
+}
+funxtion proxy_off() {
+    unset http_proxy
+    unset https_proxy
+    echo -e "proxy off"
+}
+
 test -e "${HOME}/.zsh/_iterm2/iterm2-shell-integration.zsh" && source "${HOME}/.zsh/_iterm2/iterm2-shell-integration.zsh"
 test -e "${HOME}/.zsh/_git-flow/git-flow-completion.zsh" && source "${HOME}/.zsh/_git-flow/git-flow-completion.zsh"
 test -e "${HOME}/.zsh/_git_merge_to/git_merge_to-completion.zsh" && source "${HOME}/.zsh/_git_merge_to/git_merge_to-completion.zsh"
