@@ -102,6 +102,7 @@ alias ta=tmux_attach
 function proxy_on() {
     export http_proxy="http://127.0.0.1:54107"
     export https_proxy=$http_proxy
+    export no_proxy="localhost,127.0.0.1,0.0.0.0"
     echo -e "proxy on"
 }
 funxtion proxy_off() {
