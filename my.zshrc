@@ -67,6 +67,10 @@ git_merge_to() {
     fi
 }
 
+mvn_set_version() {
+    mvn versions:set -DnewVersion=$1
+}
+
 # alias
 alias gs='git status'
 alias gpull='git pull origin $(get_current_branch)'
@@ -81,6 +85,8 @@ alias gr='git remote -v'
 
 alias ll='ls -l'
 alias tailf='tail -f'
+
+alias mvnv='mvn_set_version'
 
 export TK_SILENCE_DEPRECATION=1
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
