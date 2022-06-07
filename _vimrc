@@ -454,6 +454,7 @@ autocmd FileType cpp call SingleCompile#SetCompilerTemplate('cpp', 'g++', 'GNU C
 autocmd FileType markdown nnoremap <silent> <F5> :MarkdownPreview<CR>
 autocmd FileType markdown nnoremap <silent> <F6> :MarkdownPreviewStop<CR>
 let g:mkdp_markdown_css = expand('~/custom-markdown.css')
+let g:mkdp_theme = 'light'
 
 " ack.vim , required ripgrep
 if executable('rg')
