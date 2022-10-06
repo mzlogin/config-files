@@ -24,6 +24,7 @@ Plug 'mzlogin/vim-kramdown-tab'
 if s:windows
     Plug 'tpope/vim-markdown'
 endif
+Plug 'FuDesign2008/mkdInput.vim'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
