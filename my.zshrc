@@ -72,6 +72,11 @@ mvn_set_version() {
     mvn versions:set -DnewVersion=$1
 }
 
+zip_clean() {
+    zip -d "$1" "__MACOSX*"
+    zip -d "$1" "*.DS_Store"
+}
+
 # alias
 alias gs='git status'
 alias gpull='git pull origin $(get_current_branch)'
@@ -88,6 +93,8 @@ alias ll='ls -l'
 alias tailf='tail -f'
 
 alias mvnv='mvn_set_version'
+
+alias zipclean='zip_clean'
 
 export TK_SILENCE_DEPRECATION=1
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
