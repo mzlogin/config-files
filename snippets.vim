@@ -55,9 +55,24 @@ let g:template['java']['sop'] = 'System.out.println('
 
 " ---------------------------------------------
 " git commit msg
+function! GetFeatureFromBranch()
+    let cmd = '!git symbolic-ref --short -q HEAD'
+    if cmd =~ '^!'
+        let output = system(matchstr(cmd, '^!\zs.*'))
+    else
+        redir => output
+        silent execute cmd
+        redir END
+    endif
+    let output = substitute(output, '[\x0]', '', 'g')
+    let output = substitute(output, 'feature/', '', 'g')
+    return output
+endfunction
+
 let g:template['gitcommit'] = {}
 let g:template['gitcommit']['cs'] = "--story=".g:rs."...".g:re." --user=".g:user_for_snippets." "
 let g:template['gitcommit']['cb'] = "--bug=".g:rs."...".g:re." --user=".g:user_for_snippets." "
 let g:template['gitcommit']['ct'] = "--task=".g:rs."...".g:re." --user=".g:user_for_snippets." "
 let g:template['gitcommit']['cr'] = "ref ".g:rs."...".g:re
+let g:template['gitcommit']['cra'] = "ref https://devops.aliyun.com/projex/task/".GetFeatureFromBranch()
 let g:template['gitcommit']['uv'] = "Upgrade version"
