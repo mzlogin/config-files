@@ -74,5 +74,5 @@ let g:template['gitcommit']['cs'] = "--story=".g:rs."...".g:re." --user=".g:user
 let g:template['gitcommit']['cb'] = "--bug=".g:rs."...".g:re." --user=".g:user_for_snippets." "
 let g:template['gitcommit']['ct'] = "--task=".g:rs."...".g:re." --user=".g:user_for_snippets." "
 let g:template['gitcommit']['cr'] = "ref ".g:rs."...".g:re
-let g:template['gitcommit']['cra'] = "ref https://devops.aliyun.com/projex/task/".GetFeatureFromBranch()
+let g:template['gitcommit']['ca'] = GetFeatureFromBranch().": ".g:rs."...".g:re."\<cr>\<cr>ref https://devops.aliyun.com/projex/task/".GetFeatureFromBranch()
 let g:template['gitcommit']['uv'] = "Upgrade version"
