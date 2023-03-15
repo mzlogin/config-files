@@ -72,6 +72,10 @@ mvn_set_version() {
     mvn versions:set -DnewVersion=$1
 }
 
+mvn_deploy() {
+    mvn clean deploy -DskipTests
+}
+
 zip_clean() {
     zip -d "$1" "__MACOSX*"
     zip -d "$1" "*.DS_Store"
@@ -93,6 +97,7 @@ alias ll='ls -l'
 alias tailf='tail -f'
 
 alias mvnv='mvn_set_version'
+alias mvnd='mvn_deploy'
 
 alias zipclean='zip_clean'
 
