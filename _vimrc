@@ -488,6 +488,7 @@ autocmd FileType asciidoc nnoremap <silent> <F5> :Asciidoctor2HTML<CR>:Asciidoct
 
 " md-img-paste.vim
 autocmd FileType markdown nmap <buffer><silent> <leader>i :call mdip#MarkdownClipboardImage()<CR>
+autocmd FileType markdown command! PasteImage :call mdip#MarkdownClipboardImage()
 let g:mdip_imgdir = '.'
 
 " vim-xkbswitch
