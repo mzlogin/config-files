@@ -1,7 +1,7 @@
 // config mermaid init call
-// http://knsv.github.io/mermaid/#configuration
+// https://github.com/mermaid-js/mermaid/blob/master/docs/config/setup/modules/mermaidAPI.md#mermaidapi-configuration-defaults
 //
 // You can edit the 'MERMAID_CONFIG' variable below.
 MERMAID_CONFIG = {
-  startOnLoad: true
+  startOnLoad: false
 }
