@@ -136,6 +136,9 @@ Plug 'equal-l2/vim-base64'
 " vim terminal
 Plug 'skywind3000/vim-terminal-help'
 
+" copilot
+Plug 'github/copilot.vim'
+
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 " }}}
@@ -503,5 +506,12 @@ vnoremap <silent> <leader>ba :<c-u>call base64#decode_and_substitute()<cr>
 " vim-terminal-help
 let g:terminal_key = '≠'
 let g:terminal_close = 1
+
+" copilot
+let g:copilot_filetypes = {
+      \ 'markdown': v:true,
+      \ }
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
 
 " }}}
