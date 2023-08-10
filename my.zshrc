@@ -101,6 +101,8 @@ alias mvnd='mvn_deploy'
 
 alias zipclean='zip_clean'
 
+alias rgc='rg 10.0.0-SNAPSHOT'
+
 export TK_SILENCE_DEPRECATION=1
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
