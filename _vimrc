@@ -245,6 +245,10 @@ if has("autocmd")
     autocmd BufReadPost COMMIT_EDITMSG exe "normal! gg"
 endif
 
+" fix python version
+" ref https://mazhuang.org/2022/09/22/enable-python3-in-macvim/
+let &pythonthreedll='/usr/local/Frameworks/Python.framework/Versions/3.10/python'
+
 " }}}
 
 " FileType specific settings {{{
