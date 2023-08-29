@@ -62,7 +62,7 @@ The Quick Start below is just for self use, I don't promise it will work well in
     cd ~
     git init
     git remote add origin https://github.com/mzlogin/config-files.git
-    git pull origin master
+    git pull origin main
     ```
 
 * Install plugins
@@ -183,7 +183,7 @@ test -e "${HOME}/my.zshrc" && source "${HOME}/my.zshrc"
     cd %userprofile%
     git init
     git remote add origin https://github.com/mzlogin/config-files.git
-    git pull origin master
+    git pull origin main
     ```
 
 * install yarn
