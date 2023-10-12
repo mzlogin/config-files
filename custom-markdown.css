@@ -271,6 +271,7 @@ del {
   font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0 0.35em 0.25em -1.6em;
   vertical-align: middle;
+  color-scheme: light;
 }
 .task-list-item input[disabled] {
   cursor: default;
