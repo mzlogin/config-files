@@ -74,3 +74,5 @@ let g:template['gitcommit']['ct'] = g:rs."...".g:re."\<cr>\<cr>--story=".GetFeat
 let g:template['gitcommit']['cr'] = "ref ".g:rs."...".g:re
 let g:template['gitcommit']['ca'] = GetFeatureFromBranch().": ".g:rs."...".g:re."\<cr>\<cr>ref https://devops.aliyun.com/projex/task/".GetFeatureFromBranch()
 let g:template['gitcommit']['uv'] = "Upgrade version"
+let g:template['gitcommit']['ref'] = "ref #".GetFeatureFromBranch()
+let g:template['gitcommit']['close'] = "close #".GetFeatureFromBranch()
