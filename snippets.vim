@@ -79,12 +79,7 @@ function! GetRefInfoFromBranch()
         redir END
     endif
     let output = substitute(output, '[\x0]', '', 'g')
-    if stridx(output, 'feature/') == 0
-        let output = substitute(output, 'feature/', '#', 'g')
-    elseif stridx(output, 'issue/') == 0
-        let output = substitute(output, 'issue/', '', 'g')
-        let output = substitute(output, '/\(\d*\)$', '#\1', 'g')
-    endif
+    let output = substitute(output, 'feature/', 'yonggeshuxue/requirements#', 'g')
     return output
 endfunction
 
