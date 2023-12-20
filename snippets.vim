@@ -69,10 +69,29 @@ function! GetFeatureFromBranch()
     return output
 endfunction
 
+function! GetRefInfoFromBranch()
+    let cmd = '!git symbolic-ref --short -q HEAD'
+    if cmd =~ '^!'
+        let output = system(matchstr(cmd, '^!\zs.*'))
+    else
+        redir => output
+        silent execute cmd
+        redir END
+    endif
+    let output = substitute(output, '[\x0]', '', 'g')
+    if stridx(output, 'feature/') == 0
+        let output = substitute(output, 'feature/', '#', 'g')
+    elseif stridx(output, 'issue/') == 0
+        let output = substitute(output, 'issue/', '', 'g')
+        let output = substitute(output, '/\(\d*\)$', '#\1', 'g')
+    endif
+    return output
+endfunction
+
 let g:template['gitcommit'] = {}
 let g:template['gitcommit']['ct'] = g:rs."...".g:re."\<cr>\<cr>--story=".GetFeatureFromBranch()." --user=".g:user_for_snippets." "
 let g:template['gitcommit']['cr'] = "ref ".g:rs."...".g:re
 let g:template['gitcommit']['ca'] = GetFeatureFromBranch().": ".g:rs."...".g:re."\<cr>\<cr>ref https://devops.aliyun.com/projex/task/".GetFeatureFromBranch()
 let g:template['gitcommit']['uv'] = "Upgrade version"
-let g:template['gitcommit']['ref'] = "ref #".GetFeatureFromBranch()
+let g:template['gitcommit']['ref'] = "ref ".GetRefInfoFromBranch()
 let g:template['gitcommit']['close'] = "close #".GetFeatureFromBranch()
