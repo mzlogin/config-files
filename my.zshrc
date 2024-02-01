@@ -55,7 +55,17 @@ PROMPT='%{$fg[cyan]%}%~% %(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
 fpath=(~/.zsh $fpath)
 
 get_current_branch() {
-    git symbolic-ref --short -q HEAD
+    # git symbolic-ref --short -q HEAD
+    git branch --show-current
+}
+
+get_main_branch_name() {
+    if git rev-parse --quiet --verify main > /dev/null
+    then
+        echo "main"
+    else
+        echo "master"
+    fi
 }
 
 git_merge_to() {
@@ -87,7 +97,7 @@ alias gpull='git pull origin $(get_current_branch)'
 alias gpush='git push origin $(get_current_branch)'
 alias gmt='git_merge_to $(get_current_branch)'
 alias gc='git checkout'
-alias gcm='git checkout master'
+alias gcm='git checkout $(get_main_branch_name)'
 alias gcd='git checkout develop'
 alias gm='git merge'
 alias gb='git branch'
