@@ -148,4 +148,4 @@ test -e "${HOME}/.zsh/_git_merge_to/git_merge_to-completion.zsh" && source "${HO
 
 # forbidden brew to auto update softwares
 export HOMEBREW_NO_AUTO_UPDATE=1
-# export HOMEBREW_NO_INSTALL_CLEANUP=1
+export HOMEBREW_NO_INSTALL_CLEANUP=1
