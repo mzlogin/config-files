@@ -14,7 +14,7 @@ ul ul ul {
   margin-bottom: 0;
 }
 .markdown-body {
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei";
+  font-family: -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 17px;
   color: #333;
   line-height: 1.6;
@@ -230,20 +230,15 @@ pre code:after {
   content: normal;
 }
 code {
-  font-family: monospace, Consolas, "Liberation Mono", Menlo, Courier;
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  padding: 0 2px 0 2px;
   margin: 0;
-  font-size: 85%;
-  background-color: rgba(0,0,0,0.04);
+  font-size: 100%;
+  background-color: #f8f8f8;
+  color: #393a34;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-}
-code:before,
-code:after {
-  letter-spacing: -0.2em;
-  content: "\00a0";
+  border: solid 1px #dddddd;
 }
 a {
   color: #4078c0;
