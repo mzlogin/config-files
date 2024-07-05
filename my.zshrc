@@ -102,6 +102,8 @@ alias gcd='git checkout develop'
 alias gm='git merge'
 alias gb='git branch'
 alias gr='git remote -v'
+# 清除本地已经合并的 git 分支
+alias gclean='git branch --merged | ggrep -E -v "(^\*|master|main|dev|develop|support/fat)" | xargs git branch -d'
 
 alias ll='ls -l'
 alias tailf='tail -f'
