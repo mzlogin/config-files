@@ -91,6 +91,11 @@ zip_clean() {
     zip -d "$1" "*.DS_Store"
 }
 
+7z_clean() {
+    7zz a -tzip "$1.zip" "$1"
+    zip_clean "$1.zip"
+}
+
 # alias
 alias gs='git status'
 alias gpull='git pull origin $(get_current_branch)'
