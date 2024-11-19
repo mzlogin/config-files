@@ -82,6 +82,10 @@ mvn_set_version() {
     mvn versions:set -DnewVersion=$1
 }
 
+mvn_package() {
+    mvn clean package -DskipTests
+}
+
 mvn_deploy() {
     mvn clean deploy -DskipTests
 }
@@ -115,6 +119,7 @@ alias tailf='tail -f'
 
 alias mvnv='mvn_set_version'
 alias mvnd='mvn_deploy'
+alias mvnp='mvn_package'
 
 alias zipclean='zip_clean'
 
