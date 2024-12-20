@@ -26,10 +26,11 @@ ul ul ul {
   -webkit-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
 }
-* > *:first-child {
+li a:first-child {
   margin-top: 0 !important;
 }
-* > *:last-child {
+li a:last-child,
+ul li ul:last-child {
   margin-bottom: 0 !important;
 }
 .table-of-contents ol {
@@ -172,7 +173,6 @@ table {
   width: 100%;
   overflow: auto;
   word-break: normal;
-  word-break: keep-all;
   border-collapse: collapse;
   border-spacing: 0;
 }
