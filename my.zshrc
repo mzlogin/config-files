@@ -125,8 +125,6 @@ alias zipclean='zip_clean'
 
 alias rgc='rg 10.0.0-SNAPSHOT'
 
-alias python3='/usr/bin/python3'
-
 export TK_SILENCE_DEPRECATION=1
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
