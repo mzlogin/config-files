@@ -10,7 +10,7 @@ let g:plug_url_format = 'git@github.com:%s.git'
 call plug#begin(path)
 
 " file explorer
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 
 " tagbar
 Plug 'majutsushi/tagbar'
@@ -342,7 +342,7 @@ noremap <silent> <leader>V :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo '
 
 " Plug settings {{{
 " nerdtree
-let NERDTreeWinPos=1
+let NERDTreeWinPos='right'
 let g:NERDTreeIgnore = ['\~$', '\.pyc$', '\.class$']
 nnoremap <leader>n :NERDTreeToggle<CR>
 
