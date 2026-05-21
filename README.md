@@ -10,6 +10,8 @@ Contains config files below.
 
 4. Emacs config for Windows.
 
+5. CLAUDE.md for peronal use, valid for GitHub Copilot and Claude Code. (ref <https://code.visualstudio.com/docs/copilot/customization/custom-instructions#_use-a-claudemd-file>)
+
 The Quick Start below is just for self use, I don't promise it will work well in your environment.
 
 ## Table of Contents
