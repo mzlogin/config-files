@@ -8,6 +8,7 @@ Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-s
 
 - 使用中文回答；
 - 代码风格尽量保持与现有代码一致；
+- 如果修改了代码，根据项目类型调用合适的编译工具进行编译检查，确保编译通过；
 
 ## 1. Think Before Coding
 
