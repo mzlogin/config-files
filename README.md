@@ -10,7 +10,12 @@ Contains config files below.
 
 4. Emacs config for Windows.
 
-5. CLAUDE.md for peronal use, valid for GitHub Copilot and Claude Code. (ref <https://code.visualstudio.com/docs/copilot/customization/custom-instructions#_use-a-claudemd-file>)
+5. CLAUDE.md and skills for peronal use, valid for GitHub Copilot and Claude Code.
+
+    - <https://code.visualstudio.com/docs/copilot/customization/custom-instructions#_use-a-claudemd-file>
+    - <https://code.visualstudio.com/docs/agent-customization/agent-skills>
+    - <https://github.com/multica-ai/andrej-karpathy-skills>
+    - <https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md>
 
 The Quick Start below is just for self use, I don't promise it will work well in your environment.
 
